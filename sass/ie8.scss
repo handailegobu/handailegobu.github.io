@@ -1,12 +1,6 @@
-@import 'libs/vars';
-@import 'libs/functions';
-@import 'libs/mixins';
-
-/*
-	Dopetrope by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+@import url("https://handailegobu.github.io/sass/vars.scss");
+@import url("https://handailegobu.github.io/sass/functions.scss");
+@import url("https://handailegobu.github.io/sass/mixins.scss");
 
 /* Basic */
 
@@ -16,7 +10,7 @@
 		select,
 		textarea {
 			position: relative;
-			-ms-behavior: url('assets/js/ie/PIE.htc');
+			-ms-behavior: url('https://handailegobu.github.io/javascript/PIE.htc');
 		}
 	}
 
@@ -30,14 +24,14 @@
 	#copyright .links,
 	#nav > ul > li > a {
 		position: relative;
-		-ms-behavior: url('assets/js/ie/PIE.htc');
+		-ms-behavior: url('https://handailegobu.github.io/javascript/PIE.htc');
 	}
 
 /* Nav */
 
 	.dropotron {
 		position: relative;
-		-ms-behavior: url('assets/js/ie/PIE.htc');
+		-ms-behavior: url('https://handailegobu.github.io/javascript/PIE.htc');
 
 		&.level-0 {
 			box-shadow: none !important;
@@ -49,5 +43,5 @@
 	#banner {
 		background-position: auto;
 		background-size: contain;
-		-ms-behavior: url('assets/js/ie/backgroundsize.min.htc');
+		-ms-behavior: url('https://handailegobu.github.io/javascript/backgroundsize.min.htc');
 	}
