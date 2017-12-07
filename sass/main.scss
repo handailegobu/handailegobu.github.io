@@ -1,11 +1,11 @@
-@import 'libs/vars';
-@import 'libs/functions';
-@import 'libs/mixins';
+@import url("https://handailegobu.github.io/sass/vars.scss");
+@import url("https://handailegobu.github.io/sass/functions.scss");
+@import url("https://handailegobu.github.io/sass/mixins.scss");
 @charset "UTF-8";
-@import url("font-awesome.min.css");
+@import url("https://handailegobu.github.io/css/font-awesome.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic");
 
-	@import "libs/skel";
+	@import url("https://handailegobu.github.io/sass/skel.scss");
 
 	@include skel-breakpoints((
 		desktop: '(min-width: 737px)',
@@ -608,7 +608,7 @@
 /* Banner */
 
 	#banner {
-		background: #CCE8F4 url('../../images/pic01.jpg');
+		background: #CCE8F4 url('https://handailegobu.github.io/images/header_image.jpg');
 		background-position: center center;
 		background-size: auto 100%;
 		background-repeat: no-repeat;
@@ -642,7 +642,7 @@
 
 	#main-wrapper {
 		position: relative;
-		background: #f7f7f7 url('images/bg02.png');
+		background: #f7f7f7 url('#');
 
 		&:before {
 			content: '';
@@ -650,7 +650,7 @@
 			top: 0;
 			left: 0;
 			width: 100%;
-			background: url('images/bg01.png');
+			background: url('#');
 			background-size: 100% 100%;
 			z-index: 0;
 			opacity: 0.1;
@@ -658,7 +658,7 @@
 
 		.major {
 			h2 {
-				background: #f7f7f7 url('images/bg02.png');
+				background: #f7f7f7 url('#');
 			}
 		}
 	}
@@ -673,7 +673,7 @@
 			top: 0;
 			left: 0;
 			width: 100%;
-			background: url('images/bg01.png');
+			background: url('#');
 			background-size: 100% 100%;
 			z-index: 0;
 			opacity: 0.5;
@@ -1351,7 +1351,7 @@
 				width: _size(navPanel);
 				z-index: _misc(z-index-base) + 2;
 				color: #858484;
-				background-image: url('images/bg02.png');
+				background-image: url('#');
 				box-shadow: inset -3px 0px 5px 0px rgba(0, 0, 0, 0.35);
 
 				.link {
