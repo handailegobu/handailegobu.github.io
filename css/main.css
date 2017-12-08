@@ -1603,7 +1603,7 @@
 /* Banner */
 
 	#banner {
-		background: #ffffff url("handailegobu.github.io/images/header_image.jpg img {max-width:100%}");
+		background: #ffffff url("https://handailegobu.github.io/images/header_image.jpg);
 		background-position: center center;
 		background-size: auto 100%;
 		background-repeat: no-repeat;
