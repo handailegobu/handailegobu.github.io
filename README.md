@@ -5,6 +5,7 @@ Credits:
 
 	Icons:
 		Font Awesome (fortawesome.github.com/Font-Awesome)
+		Lego Icons (https://thenounproject.com/term/lego-brick/346724/)
 
 	Other:
 		jQuery (jquery.com)
