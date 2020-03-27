@@ -1606,6 +1606,16 @@
 					border-top-color: #827a7c;
 				}
 
+	.iconinstagram{
+	  color:#cf2e92;
+	}
+	.icontwitter{
+		color:#1da1f2;
+	}
+	.iconfacebook{
+		color:#3b5998;
+	}
+
 /* Banner */
 
 	#banner {
