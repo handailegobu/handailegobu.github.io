@@ -1,8 +1,8 @@
-# [大阪大学レゴ部ホームページ](http://handailegobu.github.io)
+# [大阪大学レゴ部ホームページ Osaka University LEGO&reg; User Group Website](http://handailegobu.github.io)
 made by nami izarra
 
 updated by
-- てぃさえい
+- てぃさえい (Tisaei)
 
 Credits:
 
