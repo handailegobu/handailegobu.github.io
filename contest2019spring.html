@@ -6,10 +6,25 @@
 		<link rel="icon" href="images/logo.png">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="https://handailegobu.github.io/javascript/html5shiv.js"></script><![endif]-->
+		<!--[if lte IE 8]><script src="javascript/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="https://handailegobu.github.io/sass/ie8.scss" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="sass/ie8.scss" /><![endif]-->
 		<script src="https://kit.fontawesome.com/652f16b4e9.js" crossorigin="anonymous"></script>
+
+		<!--common HTML parts-->
+		<script src="javascript/jquery.min.js"></script>
+		<script>
+			$(function () {
+				$("#topHeader").load("commonHTML/header.html h1, #nav:nth-of-type(2)", function() {
+					$.getScript("javascript/jquery.dropotron.min.js", function(){});
+					$.getScript("javascript/skel.min.js", function(){});
+					$.getScript("javascript/skel-viewport.min.js", function(){});
+					$.getScript("javascript/util.js", function(){});
+					$.getScript("javascript/main.js", function(){});
+				});
+				$("#footer").load("commonHTML/footer.html");
+			});
+		</script>
 	</head>
 	<body class="no-sidebar">
 		<div id="page-wrapper">
@@ -18,58 +33,7 @@
 				<div id="header-wrapper">
 					<div id="header">
 
-						<!-- Logo -->
-							<h1><a href="index.html"><img src="images/logo.png"></a></h1>
-
-						<!-- Nav -->
-							<nav id="nav">
-								<ul>
-									<li><a href="index.html">ホーム</a></li>
-									<li class="current">
-										<a href="#">活動</a>
-										<ul>
-											<li><a href="projectseg.html">作品例</a></li>
-											<li><a href="requestedworks.html">大学依頼作品</li>
-											<li>
-												<a href="#">活動内容</a>
-												<ul>
-													<li><a href="activities2015.html">2015</a></li>
-													<li><a href="activities2014.html">2014</a></li>
-												</ul>
-											</li>
-											<li>
-											<li><a href="#">コンテスト</a>
-											<ul>
-												<li><a href="contest2020springvacation.html">【第9回】2020年春</a></li>
-												<li><a href="contest2019fall.html">【第8回】2019年秋</a></li>
-												<li><a href="contest2019spring.html">【第7回】2019年春</a></li>
-												<li><a href="contest2017fall.html">【第5回】2017年秋</a></li>
-												<li><a href="contest2017spring.html">【第4回】2017年春</a></li>
-												<li><a href="contest2016fall.html">【第3回】2016年秋</a></li>
-												<li><a href="contest2016spring.html">【第2回】2016年春</a></li>
-												<li><a href="contest2015winter.html">【第1回】2015年冬</a></li>
-											</ul>
-											</li>
-											<li><a href="#">レゴレビュー</a>
-											<ul>
-												<li><a href="legoideareviews.html">レゴアイデアレビュー</a></li>
-												<li><a href="legocreatorreviews.html">レゴクリエイターレビュー</a></li>
-											</ul>
-											</li>
-										</ul>
-									</li>
-									<li><a href="about.html">レゴ部とは？</a></li>
-									<li>
-										<a href="#">最新情報！！(SNS)</a>
-										<ul>
-											<li><a href="https://twitter.com/handai05club?s=09" target="_blank">Twitter<i class="fab fa-twitter-square fa-lg fa-fw"></i></a></li>
-											<li><a href="https://www.facebook.com/handai05club/" target="_blank">Facebook<i class="fab fa-facebook-square fa-lg fa-fw"></i></a></li>
-											<li><a href="https://instagram.com/handai05club?igshid=1rt2ph1a14zqd" target="_blank">Instagram<i class="fab fa-instagram-square fa-lg fa-fw"></i></a></li>
-										</ul>
-									</li>
-									<li><a href="contact.html">ご連絡</a></li>
-								</ul>
-							</nav>
+						<div id="topHeader"></div>
 
 					</div>
 				</div>
@@ -107,12 +71,8 @@
 					</div>
 				</div>
 
-			<!-- Copyright -->
-				<div id="copyright">
-					<ul class="links">
-						<li>&copy; 大阪大学レゴ部</li>
-					</ul>
-				</div>
+			<!-- Footer -->
+				<div id="footer"></div>
 
 		</div>
 

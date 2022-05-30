@@ -10,6 +10,21 @@
 		<link rel="stylesheet" href="css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="sass/ie8.scss" /><![endif]-->
 		<script src="https://kit.fontawesome.com/652f16b4e9.js" crossorigin="anonymous"></script>
+
+		<!--common HTML parts-->
+		<script src="javascript/jquery.min.js"></script>
+		<script>
+			$(function () {
+				$("#topHeader").load("commonHTML/header.html h1, #nav:nth-of-type(4)", function() {
+					$.getScript("javascript/jquery.dropotron.min.js", function(){});
+					$.getScript("javascript/skel.min.js", function(){});
+					$.getScript("javascript/skel-viewport.min.js", function(){});
+					$.getScript("javascript/util.js", function(){});
+					$.getScript("javascript/main.js", function(){});
+				});
+				$("#footer").load("commonHTML/footer.html");
+			});
+		</script>
 	</head>
 	<body class="no-sidebar">
 		<div id="page-wrapper">
@@ -18,58 +33,7 @@
 				<div id="header-wrapper">
 					<div id="header">
 
-						<!-- Logo -->
-							<h1><a href="index.html"><img src="images/logo.png"></a></h1>
-
-						<!-- Nav -->
-							<nav id="nav">
-								<ul>
-									<li><a href="index.html">ホーム</a></li>
-									<li>
-										<a href="#">活動</a>
-										<ul>
-											<li><a href="projectseg.html">作品例</a></li>
-											<li><a href="requestedworks.html">大学依頼作品</li>
-											<li>
-												<a href="#">活動内容</a>
-												<ul>
-													<li><a href="activities2015.html">2015</a></li>
-													<li><a href="activities2014.html">2014</a></li>
-												</ul>
-											</li>
-											<li>
-											<li><a href="#">コンテスト</a>
-											<ul>
-												<li><a href="contest2020springvacation.html">【第9回】2020年春</a></li>
-												<li><a href="contest2019fall.html">【第8回】2019年秋</a></li>
-												<li><a href="contest2019spring.html">【第7回】2019年春</a></li>
-												<li><a href="contest2017fall.html">【第5回】2017年秋</a></li>
-												<li><a href="contest2017spring.html">【第4回】2017年春</a></li>
-												<li><a href="contest2016fall.html">【第3回】2016年秋</a></li>
-												<li><a href="contest2016spring.html">【第2回】2016年春</a></li>
-												<li><a href="contest2015winter.html">【第1回】2015年冬</a></li>
-											</ul>
-											</li>
-											<li><a href="#">レゴレビュー</a>
-											<ul>
-												<li><a href="legoideareviews.html">レゴアイデアレビュー</a></li>
-												<li><a href="legocreatorreviews.html">レゴクリエイターレビュー</a></li>
-											</ul>
-											</li>
-										</ul>
-									</li>
-									<li><a href="about.html">レゴ部とは？</a></li>
-									<li>
-										<a href="#">最新情報！！(SNS)</a>
-										<ul>
-											<li><a href="https://twitter.com/handai05club?s=09" target="_blank">Twitter<i class="fab fa-twitter-square fa-lg fa-fw"></i></a></li>
-											<li><a href="https://www.facebook.com/handai05club/" target="_blank">Facebook<i class="fab fa-facebook-square fa-lg fa-fw"></i></a></li>
-											<li><a href="https://instagram.com/handai05club?igshid=1rt2ph1a14zqd" target="_blank">Instagram<i class="fab fa-instagram-square fa-lg fa-fw"></i></a></li>
-										</ul>
-									</li>
-									<li class="current"><a href="contact.html">ご連絡</a></li>
-								</ul>
-							</nav>
+						<div id="topHeader"></div>
 
 					</div>
 				</div>
@@ -95,7 +59,7 @@
 									<h2>製作依頼について</h2>
 								</header>
 								<p>
-								まずはじめに,阪大レゴ部はレゴ社及びレゴジャパン株式会社に公式に認められて活動しているわけではありません．そのため,その製作物は全て「レゴ作品」「レゴブロック作品」ではなく「ブロック作品」という扱いになります．また阪大レゴ部はレゴブロックで作品をつくるプロ集団ではないこと，本格的な製作は，金銭的にも時間的にも，趣味の範囲・ボランティアでできる範囲を超えており,難易度のとても高い取り組みであるとご承知ください．
+								まずはじめに、阪大レゴ部はレゴ社及びレゴジャパン株式会社に公式に認められて活動しているわけではありません。そのため、その製作物は全て「レゴ作品」「レゴブロック作品」ではなく「ブロック作品」という扱いになります。また阪大レゴ部はレゴブロックで作品をつくるプロ集団ではないこと、本格的な製作は、金銭的にも時間的にも、趣味の範囲・ボランティアでできる範囲を超えており、難易度のとても高い取り組みであるとご承知ください。
 								</p>
 								<p>
 								<centre><img src="images/shabani2.jpg" alt="gorilla out of lego">
@@ -105,7 +69,7 @@
 									<br>㈱栄地下センター様のご依頼より阪大レゴ部が製作</i></centre>
 								</p>
 								<p>
-								依頼される作品の大きさ・利用目的・予算等を明記の上,&nbsp;&nbsp;<a href="mailto:handai05cafe@gmail.com?subject=製作依頼">メール</a>&nbsp;&nbsp;にお問い合わせください.
+								依頼される作品の大きさ・利用目的・予算等を明記の上、<a href="mailto:handai05cafe@gmail.com?subject=製作依頼">メール</a>にお問い合わせください。
 								</p>
 							</article>
 
@@ -114,17 +78,17 @@
 									<h2>作品レンタルについて</h2>
 								</header>
 								<p>
-									部のHPで紹介したり，学祭で展示したりしているレゴブロック作品は，全て部員の私物です．したがって，レンタルに関しては原則的に以下の条件を設けさせていただきます．
+									部のHPで紹介したり、学祭で展示したりしているレゴブロック作品は、全て部員の私物です。したがって、レンタルに関しては原則的に以下の条件を設けさせていただきます。
 								</p>
 								<ul class="default">
-									<li>クリアケースなど，一般の方の手で触れられないような展示方法</li>
-									<li>阪大レゴ部が，レゴブロック作品を展示するに，ふさわしい展示場所・展示目的</li>
+									<li>クリアケースなど、一般の方の手で触れられないような展示方法</li>
+									<li>阪大レゴ部が、レゴブロック作品を展示するに、ふさわしい展示場所・展示目的</li>
 									<li>輸送費・返送費のご負担</li>
 									<li>パーツの破損・盗難時の補償のお約束</li>
 									<li>設営費のご負担（設営と撤収には作品に知識のある人材が必要です）</li>
 								</ul>
 								<p>
-								具体的なレンタル期間・展示場所と規模・予算等を明記の上,&nbsp;&nbsp;<a href="mailto:handai05cafe@gmail.com?subject=作品レンタル">メール</a>&nbsp;&nbsp;にお問い合わせください.
+								具体的なレンタル期間・展示場所と規模・予算等を明記の上、<a href="mailto:handai05cafe@gmail.com?subject=作品レンタル">メール</a>にお問い合わせください。
 								</p>
 							</article>
 
@@ -133,10 +97,10 @@
 									<h2>イベント開催について</h2>
 								</header>
 								<p>
-									営利目的のイベント依頼については一切引き受けておりません．また子どもを対象としたワークショップ系のイベントを優先的に引き受けております．
+									営利目的のイベント依頼については一切引き受けておりません。また子どもを対象としたワークショップ系のイベントを優先的に引き受けております。
 								</p>
 								<p>
-								イベントの内容，予算，時期等を明記の上,&nbsp;&nbsp;<a href="mailto:handai05cafe@gmail.com?subject=イベント開催">メール</a>&nbsp;&nbsp;にお問い合わせください.
+								イベントの内容、予算、時期等を明記の上、<a href="mailto:handai05cafe@gmail.com?subject=イベント開催">メール</a>にお問い合わせください。
 								</p>
 							</article>
 
@@ -148,24 +112,19 @@
 								阪大レゴ部に興味を持っていただき、ありがとうございます。阪大レゴ部では阪大生の部員を随時募集しております。子どもが好き！、イベントを開催したい！、レゴが好き！大歓迎です！
 								</p>
 								<p>
-								<a href="mailto:handai05cafe@gmail.com?subject=入部希望">メール</a>&nbsp;&nbsp;宛に名前・学部・連絡先を明記の上、メールをお送りください。
+								<a href="mailto:handai05cafe@gmail.com?subject=入部希望">メール</a>宛に名前・学部・連絡先を明記の上、メールをお送りください。
 								</p>
 							</article>
 
 					</div>
 				</div>
 
-								<!-- Copyright -->
-									<div id="copyright">
-										<ul class="links">
-											<li>&copy; 大阪大学レゴ部</li>
-										</ul>
-									</div>
+			<!--Footer-->
+				<div id="footer"></div>
 
-							</div>
+		</div>
 
 		<!-- Scripts -->
-			<script src="javascript/jquery.min.js"></script>
 			<script src="javascript/jquery.dropotron.min.js"></script>
 			<script src="javascript/skel.min.js"></script>
 			<script src="javascript/skel-viewport.min.js"></script>
