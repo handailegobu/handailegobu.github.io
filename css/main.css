@@ -39,7 +39,9 @@
 	body {
 		-webkit-text-size-adjust: none;
 	}
-
+/* namelist for pc */
+	.pc { display: block ; }
+	.sp { display: none ; }
 /* Box Model */
 
 	*, *:before, *:after {
@@ -2524,5 +2526,11 @@
 				#copyright .links {
 					padding: 0.75em 1.25em 0.75em 1.25em;
 				}
-
+		
+		/* Change Namelist */
+			.pc { display: none ; }
+			.sp { 
+				display: block ; 
+				font-size: 0.7em;
+			}	
 	}
