@@ -15,7 +15,6 @@
 		});
 
 	$(function() {
-
 		var	$window = $(window),
 			$body = $('body');
 
@@ -36,6 +35,7 @@
 					skel.breakpoint('mobile').active
 				);
 			});
+
 
 		// Dropdowns.
 			$('#nav > ul').dropotron({
@@ -78,6 +78,10 @@
 				if (skel.vars.os == 'wp' && skel.vars.osVersion < 10)
 					$('#titleBar, #navPanel, #page-wrapper')
 						.css('transition', 'none');
+
+		$liList = $('#nav > ul').children('li');
+		$liList.eq(currentPos).addClass('current');
+		console.log("done");
 
 	});
 
