@@ -15,6 +15,11 @@
 		});
 
 	$(function() {
+
+		$liList = $('#nav > ul').children('li');
+		$liList.eq(currentPos).addClass('current');
+		console.log("done");
+
 		var	$window = $(window),
 			$body = $('body');
 
@@ -45,7 +50,7 @@
 			});
 
 		// Off-Canvas Navigation.
-
+		console.log("done");
 			// Title Bar.
 				$(
 					'<div id="titleBar">' +
@@ -79,9 +84,7 @@
 					$('#titleBar, #navPanel, #page-wrapper')
 						.css('transition', 'none');
 
-		$liList = $('#nav > ul').children('li');
-		$liList.eq(currentPos).addClass('current');
-		console.log("done");
+
 
 	});
 
