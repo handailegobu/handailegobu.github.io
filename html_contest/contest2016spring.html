@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>大阪大学レゴ部 2016春コンテスト</title>
+		<link rel="icon" href="images/logo.png">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="javascript/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="sass/ie8.scss" /><![endif]-->
+		<script src="https://kit.fontawesome.com/652f16b4e9.js" crossorigin="anonymous"></script>
+
+		<!--common HTML parts-->
+		<script src="javascript/jquery.min.js"></script>
+		<script>
+			$(function () {
+				$("#topHeader").load("commonHTML/header.html h1, #nav:nth-of-type(2)", function() {
+					$.getScript("javascript/jquery.dropotron.min.js", function(){});
+					$.getScript("javascript/skel.min.js", function(){});
+					$.getScript("javascript/skel-viewport.min.js", function(){});
+					$.getScript("javascript/util.js", function(){});
+					$.getScript("javascript/main.js", function(){});
+				});
+				$("#footer").load("commonHTML/footer.html");
+			});
+		</script>
+	</head>
+	<body class="no-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<div id="header">
+
+						<div id="topHeader"></div>
+
+					</div>
+				</div>
+
+			<!-- Main -->
+				<div id="main-wrapper">
+					<div class="container">
+
+						<!-- Content -->
+							<article class="box post">
+								<header>
+									<h2>2016春のオリジナル作品コンテストの結果発表!!!</h2>
+								</header>
+								<p></p>
+								<p>この度は、春のオリジナル作品コンテストへのたくさんのご応募、誠にありがとうございました。 いちょう祭で開かれた決勝ラウンドで展示された個性豊かな4つの作品を紹介していきたいと思います！</p>
+
+								<h3>コンテストの結果発表</h3>
+								<p></p>
+								<h4>最優秀賞&nbsp;&nbsp;&nbsp;&nbsp; だいきさん作 「マジック！」</h4>
+								<img src="images/2016spring/winner.jpg">
+								<p>不思議なマジックが、たくさん仕掛けられていて、見ていてとても楽しい!!
+								<br>お花やトランプ、飛行機などがシルクハットからポンポンと飛び出す躍動感に感激です!</p>
+
+								<p></p>
+								<h4>優秀賞&nbsp;&nbsp;&nbsp;&nbsp;かんちゃんさん作 「ぼくのキャリアカー」 </h4>
+								<div id="parent">
+								<img src="images/2016spring/runnerup.jpg">
+								<img src="images/2016spring/runnerupcar.JPG">
+								</div>
+								<p>なんとこのキャリアカーには、消防車やクレーン車など12台もの乗り物が入っているぞ！
+								<br>その中には、阪大のマスコットキャラクター、マチカネワニをモチーフに作られた車も発見!!</p>
+
+								<p></p>
+								<h4>優秀賞&nbsp;&nbsp;&nbsp;&nbsp;みやもとさん作 「宮島の大鳥居」</h4>
+								<img src="images/2016spring/third.jpg">
+								<p>何か荘厳な雰囲気を感じさせる大鳥居。
+								<br>この大きさで、ここまで再現するとは･･･圧巻です。</p>
+
+								<p></p>
+								<h4>優秀賞&nbsp;&nbsp;&nbsp;&nbsp;ひびりんさん作 「グランドピアノ」</h4>
+								<img src="images/2016spring/fourthplace.jpg">
+								<p>ピアノ特有の滑らかな曲線美が、上手く表現されていて素晴らしい!
+								<br>また、ピアノのふたは、開閉できて本物のピアノと同じ動きができるぞ!</p>
+							</article>
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<div id="footer"></div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="javascript/jquery.dropotron.min.js"></script>
+			<script src="javascript/skel.min.js"></script>
+			<script src="javascript/skel-viewport.min.js"></script>
+			<script src="javascript/util.js"></script>
+			<!--[if lte IE 8]><script src="javascript/respond.min.js"></script><![endif]-->
+
+	</body>
+</html>
