@@ -26,20 +26,12 @@
 		// Disable animations/transitions until the page has loaded.
 			$body.addClass('is-loading');
 
-			$window.on('load', function() {
-				$body.removeClass('is-loading');
-			});
+
 
 		// Fix: Placeholder polyfill.
 			$('form').placeholder();
 
-		// Prioritize "important" elements on mobile.
-			skel.on('+mobile -mobile', function() {
-				$.prioritize(
-					'.important\\28 mobile\\29',
-					skel.breakpoint('mobile').active
-				);
-			});
+
 
 
 		// Dropdowns.
@@ -86,6 +78,17 @@
 
 
 
+	});
+	$window.on('load', function() {
+		$body.removeClass('is-loading');
+	});
+
+	// Prioritize "important" elements on mobile.
+	skel.on('+mobile -mobile', function() {
+		$.prioritize(
+			'.important\\28 mobile\\29',
+			skel.breakpoint('mobile').active
+		);
 	});
 
 })(jQuery);
