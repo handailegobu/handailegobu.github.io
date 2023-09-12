@@ -174,10 +174,15 @@
 						$.getScript("javascript/util.js", function(){});
 						console.log("Loading util: done");
 						$.getScript("javascript/main.js", function(){});
-						console.log("Loading main: done")
+						console.log("Loading main: done");
+						
 					});
 					$("#footer").load("commonHTML/footer.html");
 				});
+				if (window.name != "reloaded"){
+					window.location.reload(false);
+					window.name = "reloaded";
+				}
 			</script>
 			<!-- <script src="javascript/main.js"></script> -->
 			<!--[if lte IE 8]><script src="javascript/respond.min.js"></script><![endif]-->
