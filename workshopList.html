@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>ページタイトル</title>
+        <link rel="icon" href="images/logo.png">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="javascript/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="sass/ie8.scss" /><![endif]-->
+		<script src="https://kit.fontawesome.com/652f16b4e9.js" crossorigin="anonymous"></script>
+
+		<!--common HTML parts-->
+		<script src="javascript/jquery.min.js"></script>
+		<script>
+			$(function () {
+				$("#topHeader").load("commonHTML/header.html h1, #nav", function() {
+					currentPos = 1;
+					$.getScript("javascript/jquery.dropotron.min.js", function(){});
+					$.getScript("javascript/skel.min.js", function(){});
+					$.getScript("javascript/skel-viewport.min.js", function(){});
+					$.getScript("javascript/util.js", function(){});
+					$.getScript("javascript/main.js", function(){});
+				});
+				$("#footer").load("commonHTML/footer.html");
+			});
+		</script>
+    </head>
+    <body class="no-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<div id="header">
+
+						<div id="topHeader"></div>
+
+					</div>
+				</div>
+
+			<!-- Main -->
+				<div id="main-wrapper">
+					<div class="12u(mobile)" style="position: absolute; left:50%; transform:translateX(-50%);">
+						<section>
+							<header class="major">
+								<h2>代表作</h2>
+							</header>
+							<div class="row">
+								<div class="6u 12u(mobile)">
+									<section class="box">
+										<a href="#" class="image featured"><img src="images/shabani.jpg" alt="famous gorilla from higashiyama zoo built out of LEGO" /></a>
+										<header>
+											<h3>イケメンゴリラシャバーニ</h3>
+										</header>
+										<p>名古屋市東山動物園のイケメン人気ゴリラ「シャバーニ」の等身大モデルを半年間かけて製作しました。本作は栄駅地下サカエチカのクリスタル広場にて約9カ月展示された後、現在は東山動物園内にて展示されています。</p>
+										<footer>
+											<a href="https://www.nikkei.com/article/DGXLASFD04H06_U7A300C1CN0000/" class="button alt" target="_blank">日経の記事</a>
+										</footer>
+									</section>
+								</div>
+								<div class="6u 12u(mobile)">
+									<section class="box">
+										<a href="#" class="image featured"><img src="images/kofun.jpg" alt="" /></a>
+										<header>
+											<h3>560分の1仁徳陵古墳</h3>
+										</header>
+										<p>百舌鳥・古市古墳群の世界文化遺産登録を目指す取り組みの一環としてブロックで、５６０分の１サイズの仁徳陵古墳を製作しました。デジタルデータにて設計し、ほりや墳丘の傾斜までリアルに再現しました。</p>
+										<footer>
+											<a href="https://www.archaeology.org/news/5349-170302-japan-lego-tomb" class="button alt" target="_blank">Archaeologyの記事</a>
+										</footer>
+									</section>
+								</div>
+								<div class="6u 12u(mobile)">
+									<section class="box">
+										<a href="#" class="image featured"><img src="images/hitachi.jpg" alt="" /></a>
+										<header>
+											<h3>日立の街</h3>
+										</header>
+										<p>東京と大阪で開催されたマイナビ主催の日立グループ合同説明会で「日立製品が活躍する街」をテーマにモデルを展示しました。同社の製品が街のどこで活躍しているのかを分かりやすく視覚化し、来場者に見ていただきました。</p>
+									</section>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<div id="footer"></div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="javascript/jquery.dropotron.min.js"></script>
+			<script src="javascript/skel.min.js"></script>
+			<script src="javascript/skel-viewport.min.js"></script>
+			<script src="javascript/util.js"></script>
+			<!--[if lte IE 8]><script src="javascript/respond.min.js"></script><![endif]-->
+
+	</body>
+</html>
