@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>大阪大学レゴ部　入部案内</title>
+        <link rel="icon" href="images/logo.png">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="javascript/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="sass/ie8.scss" /><![endif]-->
+		<script src="https://kit.fontawesome.com/652f16b4e9.js" crossorigin="anonymous"></script>
+
+		<!--common HTML parts-->
+		<script src="javascript/jquery.min.js"></script>
+		<script>
+			$(function () {
+				$("#topHeader").load("commonHTML/header.html h1, #nav", function() {
+					currentPos = 5;
+					$.getScript("javascript/jquery.dropotron.min.js", function(){});
+					$.getScript("javascript/skel.min.js", function(){});
+					$.getScript("javascript/skel-viewport.min.js", function(){});
+					$.getScript("javascript/util.js", function(){});
+					console.log("Loading util: done");
+					$.getScript("javascript/main.js", function(){});
+					console.log("Loading main: done")
+				});
+				$("#footer").load("commonHTML/footer.html");
+			});
+		</script>
+    </head>
+    <body class="left-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<div id="header">
+
+						<div id="topHeader"></div>
+
+					</div>
+				</div>
+
+			<!-- Main -->
+				<div id="main-wrapper">
+					<div class="container">
+						<div class="row">
+
+							<div class="8u 12u(mobile)">
+
+								<!-- Content -->
+									<article class="box post">
+										<section>
+										<header>
+											<h2>阪大レゴ部とは？</h2>
+										</header>
+										<p>
+											阪大レゴ部は、レゴ&reg;ブロックを用いて様々な活動を行っている大阪大学の文化系公認団体です。豊中キャンパスにある部室で自由に作品を作るのはもちろん、企業から依頼された作品を作ったり、ワークショップを開催したりしています。
+										</p>
+                                        <p>
+                                            日々の活動に加え、行事もたくさんあります。例えば、年に2回ある学校祭やレゴの大きな展示会であるJBFへの参加、部内コンペ、旅行、ビンゴ大会などです。活動時期や頻度は、基本的に自由です。放課後に活動する人もいれば、授業の空きコマや昼休みに活動する人もいます。
+                                        </p>
+                                        <p>
+                                            普段から個人作品を作る人もいれば、学祭の時にみんなで作る合作の制作のみに参加する人もいます。Studioというソフトを使ってレゴの設計図を作るときは、部室に行くことなく活動することもできます。そのため、自分のペースに合わせることができます！
+                                        </p>
+										<p>
+											レゴ部が作った作品が気になる方は、<a href="projectseg.html">こちら</a>からどうぞ。
+										</p>
+										</section>
+									</article>
+
+                                    <article class="box post">
+										<section>
+										<header>
+											<h2>入部案内</h2>
+										</header>
+										<p>
+											レゴ部についてもっと知りたいという方に向けて、部室見学やZOOM説明会などを行っています。詳しいことについては<a href="https://twitter.com/handai05club?s=09">Twitter</a>や<a href="https://instagram.com/handai05club?igshid=1rt2ph1a14zqd">Instagram</a>を
+											チェックしてみてください！入部希望の方は<a href="mailto:handai05cafe@gmail.com?subject=入部希望">メール</a>またはTwitter, InstagramのDMに名前・学部・連絡先を書いて入部希望をお送りください。
+                                        </p>
+										</section>
+									</article>
+
+									<article class="box post">
+										<section>
+										<header>
+											<h2>Q&A</h2>
+										</header>
+										<p>
+											レゴ部についての不安や悩みにお答えします！
+                                        </p>
+                                        <p>
+											Q：部費はいくらですか？<br>　　A：入部時期を問わず年会費は3000円です。クラブTシャツが欲しい人は別途費用が必要です。
+                                        </p>
+										<p>
+											Q：忙しいですか？？<br>　　A：基本自由参加なので、心配する必要はありません！部員の中にはバイトとの両立や兼部をしている人がたくさんいます。
+                                        </p>
+                                        <p>
+											Q：レゴ未経験でも大丈夫ですか？<br>　　A：初心者大歓迎です！実際に、部員の多くはレゴ未経験でした。
+                                        </p>
+                                        <p>
+											Q：文系でも大丈夫ですか？<br>　　A：文系も理系も関係ないです！理系の人の方が若干多いですが、文系の人も活発に活動しています。
+                                        </p>
+                                        <p>
+											Q：キャンパスが変わる学部でも大丈夫ですか？<br>　　A：学内連絡バスがあるので、気にする必要はありません。例えば普段は吹田キャンパスで授業を受けている工学部の部員はたくさんいます。
+                                        </p>
+										</section>
+									</article>
+								
+								
+							</div>
+							
+						</div>
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<div id="footer"></div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="javascript/jquery.dropotron.min.js"></script>
+			<script src="javascript/skel.min.js"></script>
+			<script src="javascript/skel-viewport.min.js"></script>
+			<script src="javascript/util.js"></script>
+			<!--[if lte IE 8]><script src="javascript/respond.min.js"></script><![endif]-->
+
+	</body>
+</html>

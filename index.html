@@ -12,19 +12,8 @@
 		<script src="https://kit.fontawesome.com/652f16b4e9.js" crossorigin="anonymous"></script>
 		
 		<!--common HTML parts-->
-		<script src="javascript/jquery.min.js"></script>
-		<script>
-			$(function () {
-				$("#topHeader").load("commonHTML/header.html h1, #nav:nth-of-type(1)", function() {
-					$.getScript("javascript/jquery.dropotron.min.js", function(){});
-					$.getScript("javascript/skel.min.js", function(){});
-					$.getScript("javascript/skel-viewport.min.js", function(){});
-					$.getScript("javascript/util.js", function(){});
-					$.getScript("javascript/main.js", function(){});
-				});
-				$("#footer").load("commonHTML/footer.html");
-			});
-		</script>
+		
+
 	</head>
 	<body class="homepage">
 		<div id="page-wrapper">
@@ -44,13 +33,13 @@
 							</section>
 
 						<!-- Topic -->
-							<section id="intro">
+							<!-- <section id="intro">
 								<h2 style="line-height: 200%">【お知らせ】</h2>
 								<p>今年度も大阪大学レゴ部は2023年度大阪大学祭「いちょう祭」に出展いたします。<br>
 								   いちょう祭の公式ホームページは<a href="https://ichosai.com/pre/">こちら</a>
 									
 								</p>
-							</section>
+							</section> -->
 
 						<!-- Intro -->
 							<section id="intro" class="container">
@@ -61,7 +50,7 @@
 											<header>
 												<h2>活動目標</h2>
 											</header>
-											<p>阪大レゴ部ではでは「子どもたちに対してサイエンスを教える」ということで色々なワークシップやイベントを開催しております</p>
+											<p>阪大レゴ部では「子どもたちに対してサイエンスを教える」ということで色々なワークシップやイベントを開催しております</p>
 										</section>
 									</div>
 									<div class="4u 12u(mobile)">
@@ -70,7 +59,7 @@
 											<header>
 												<h2>メインイベント</h2>
 											</header>
-											<p>阪大レゴ部は年2回のいちょう祭、まちかね祭をメインの活動として展示会やイベントを開いております</p>
+											<p>阪大レゴ部は年2回のいちょう祭、まちかね祭をメインの活動として展示会やイベントを開いています</p>
 										</section>
 									</div>
 									<div class="4u 12u(mobile)">
@@ -170,10 +159,32 @@
 		</div>
 
 		<!-- Scripts -->
+			<script src="javascript/jquery.min.js"></script>
 			<script src="javascript/jquery.dropotron.min.js"></script>
 			<script src="javascript/skel.min.js"></script>
 			<script src="javascript/skel-viewport.min.js"></script>
 			<script src="javascript/util.js"></script>
+			<script>
+				$(function () {
+					$("#topHeader").load("commonHTML/header.html h1, #nav", function() {
+						currentPos = 0;
+						$.getScript("javascript/jquery.dropotron.min.js", function(){});
+						$.getScript("javascript/skel.min.js", function(){});
+						$.getScript("javascript/skel-viewport.min.js", function(){});
+						$.getScript("javascript/util.js", function(){});
+						console.log("Loading util: done");
+						$.getScript("javascript/main.js", function(){});
+						console.log("Loading main: done");
+						
+					});
+					$("#footer").load("commonHTML/footer.html");
+				});
+				if (window.name != "reloaded"){
+					window.location.reload(false);
+					window.name = "reloaded";
+				}
+			</script>
+			<!-- <script src="javascript/main.js"></script> -->
 			<!--[if lte IE 8]><script src="javascript/respond.min.js"></script><![endif]-->
 
 	</body>

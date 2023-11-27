@@ -16,26 +16,23 @@
 
 	$(function() {
 
+		$liList = $('#nav > ul').children('li');
+		$liList.eq(currentPos).addClass('current');
+		console.log("done");
+
 		var	$window = $(window),
 			$body = $('body');
 
 		// Disable animations/transitions until the page has loaded.
 			$body.addClass('is-loading');
 
-			$window.on('load', function() {
-				$body.removeClass('is-loading');
-			});
+
 
 		// Fix: Placeholder polyfill.
 			$('form').placeholder();
 
-		// Prioritize "important" elements on mobile.
-			skel.on('+mobile -mobile', function() {
-				$.prioritize(
-					'.important\\28 mobile\\29',
-					skel.breakpoint('mobile').active
-				);
-			});
+
+
 
 		// Dropdowns.
 			$('#nav > ul').dropotron({
@@ -45,7 +42,7 @@
 			});
 
 		// Off-Canvas Navigation.
-
+		console.log("done");
 			// Title Bar.
 				$(
 					'<div id="titleBar">' +
@@ -79,6 +76,19 @@
 					$('#titleBar, #navPanel, #page-wrapper')
 						.css('transition', 'none');
 
+
+
+	});
+	$window.on('load', function() {
+		$body.removeClass('is-loading');
+	});
+
+	// Prioritize "important" elements on mobile.
+	skel.on('+mobile -mobile', function() {
+		$.prioritize(
+			'.important\\28 mobile\\29',
+			skel.breakpoint('mobile').active
+		);
 	});
 
 })(jQuery);
