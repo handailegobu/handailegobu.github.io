@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>ページタイトル</title>
+        <link rel="icon" href="images/logo.png">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="javascript/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="sass/ie8.scss" /><![endif]-->
+		<script src="https://kit.fontawesome.com/652f16b4e9.js" crossorigin="anonymous"></script>
+
+		<!--common HTML parts-->
+		<script src="javascript/jquery.min.js"></script>
+		<script>
+			$(function () {
+				$("#topHeader").load("commonHTML/header.html h1, #nav", function() {
+					currentPos = 1;
+					$.getScript("javascript/jquery.dropotron.min.js", function(){});
+					$.getScript("javascript/skel.min.js", function(){});
+					$.getScript("javascript/skel-viewport.min.js", function(){});
+					$.getScript("javascript/util.js", function(){});
+					$.getScript("javascript/main.js", function(){});
+				});
+				$("#footer").load("commonHTML/footer.html");
+			});
+		</script>
+    </head>
+    <body class="no-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<div id="header">
+
+						<div id="topHeader"></div>
+
+					</div>
+				</div>
+
+			<!-- Main -->
+				<div id="main-wrapper">
+					<div class="container">
+
+                        <!-- Content -->
+                            <article class="box post">
+                                <section>
+                                <header>
+                                    <h2>過去の開催イベント記事一覧</h2>
+                                </header>
+								<h3>2023</h3>
+								<p>
+									<li><a href="workshop_23_doushin.html">同心児童館(まちをつくろう)</a></li>
+									<li><a href="workshop_23_seinan.html">西南図書館(４足歩行ロボットを作ろう)</a></li>
+									<li><a href="workshop_23_nishiwaki.html">西脇市こどもプラザ(自由に作ろう＆作品展示)</a></li>
+									<li><a href="workshop_23_jbf.html">JBF (Japan Brickfest) 2023</a></li>
+									<li><a href="workshop_23_shirofes.html">お城フェス 2023</a></li>
+									<li><a href="workshop_23_rinku.html">りんくうプレジャータウンシークル(ひまわりを作ろう)</a></li>
+									<li><a href="workshop_23_senrichuoukouen.html">千里中央公園（未来の公園を考えよう）</a></li>
+		
+								</p>
+                                
+                                
+								
+								
+                                </section>
+                            </article>
+                    </div>
+				</div>
+
+			<!-- Footer -->
+				<div id="footer"></div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="javascript/jquery.dropotron.min.js"></script>
+			<script src="javascript/skel.min.js"></script>
+			<script src="javascript/skel-viewport.min.js"></script>
+			<script src="javascript/util.js"></script>
+			<!--[if lte IE 8]><script src="javascript/respond.min.js"></script><![endif]-->
+
+	</body>
+</html>
