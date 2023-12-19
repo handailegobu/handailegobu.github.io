@@ -15,7 +15,8 @@
 		<script src="/javascript/jquery.min.js"></script>
 		<script>
 			$(function () {
-				$("#topHeader").load("/commonHTML/header.html h1, #nav:nth-of-type(2)", function() {
+				$("#topHeader").load("/commonHTML/header.html h1, #nav", function() {
+					currentPos = 2;
 					$.getScript("/javascript/jquery.dropotron.min.js", function(){});
 					$.getScript("/javascript/skel.min.js", function(){});
 					$.getScript("/javascript/skel-viewport.min.js", function(){});

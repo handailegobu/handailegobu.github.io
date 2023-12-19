@@ -15,7 +15,8 @@
 		<script src="/javascript/jquery.min.js"></script>
 		<script>
 			$(function () {
-				$("#topHeader").load("/commonHTML/header.html h1, #nav:nth-of-type(2)", function() {
+				$("#topHeader").load("/commonHTML/header.html h1, #nav", function() {
+					currentPos = 2;
 					$.getScript("/javascript/jquery.dropotron.min.js", function(){});
 					$.getScript("/javascript/skel.min.js", function(){});
 					$.getScript("/javascript/skel-viewport.min.js", function(){});
@@ -81,7 +82,7 @@
 			<script src="/javascript/skel.min.js"></script>
 			<script src="/javascript/skel-viewport.min.js"></script>
 			<script src="/javascript/util.js"></script>
-			<!--[if lte IE 8]><script src="javascript/ie/respond.min.js"></script><![endif]-->
+			<!--[if lte IE 8]><script src="javascript/respond.min.js"></script><![endif]-->
 
 	</body>
 </html>
