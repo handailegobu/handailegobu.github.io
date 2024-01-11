@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>ページタイトル</title>
+        <link rel="icon" href="images/logo.png">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="javascript/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="sass/ie8.scss" /><![endif]-->
+		<script src="https://kit.fontawesome.com/652f16b4e9.js" crossorigin="anonymous"></script>
+
+		<!--common HTML parts-->
+		<script src="javascript/jquery.min.js"></script>
+		<script>
+			$(function () {
+				$("#topHeader").load("commonHTML/header.html h1, #nav", function() {
+					currentPos = 1;
+					$.getScript("javascript/jquery.dropotron.min.js", function(){});
+					$.getScript("javascript/skel.min.js", function(){});
+					$.getScript("javascript/skel-viewport.min.js", function(){});
+					$.getScript("javascript/util.js", function(){});
+					$.getScript("javascript/main.js", function(){});
+				});
+				$("#footer").load("commonHTML/footer.html");
+			});
+		</script>
+    </head>
+    <body class="no-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<div id="header">
+
+						<div id="topHeader"></div>
+
+					</div>
+				</div>
+
+			<!-- Main -->
+				<div id="main-wrapper">
+					<div class="container">
+
+                        <!-- Content -->
+                            <article class="box post">
+                                <section>
+                                <header>
+                                    <h2>クリスマスワークショップ</h2>
+                                    <h3>大阪大学レゴ部と作るクリスマスオーナメント</h3>
+                                </header>
+								
+                                <p>
+									こんにちは。阪大レゴ部の 海 です。
+                                </p>
+                                <p>
+                                    今回は「大阪大学レゴ部と作るクリスマスオーナメント」のワークショップを開催させていただきました。
+                                    内容は子どもたちと一緒に、レゴを使ってサンタクロースとクリスマスツリーを作るというものでした。
+                                
+                                </p>
+                                
+                                <p>以下のサンタとツリーが今回作成したものです。
+                                    <img src="images\article\23_christmas\画像1.jpg"> 
+                                </p>                           
+                                <p>                                    
+                                    <ul>
+                                        開催の日時等は以下の通りです。
+                                        <li>・　日程　：令和５年１２月１６日（土）</li>
+                                        <li>・開催時間：１３時～１６時</li>
+                                        <li>・　会場　：ワークスペースCUE</li>
+                                        <li>・参加人数：部員３名　一般参加者３５人程度</li>
+                                    </ul>                                                                    
+                                </p>
+                                <img src="images\article\23_christmas\画像2.jpg">
+                                
+                                <P>
+                                    今回はいくつか作品の展示もさせていただきました。
+                                    子どもたちも興味を持ってくれていて嬉しかったです。
+                                    また、子どもたちが自由にレゴで遊べる時間も設け、各々が楽しそうに制作していたのが印象的でした。
+                                </p>
+                                <p>
+                                <img src="images\article\23_christmas\画像3.jpg">
+                                </p>
+                                <p>
+                                    ワークショップにはたくさんの子どもたちが参加してくださり、終始和やかな雰囲気で楽しませていただきました。
+                                    特にサンタクロースは難しい工程もあったのですが、保護者や部員のサポートもあり、無事に全員作り終えることができました。
+                                    クリスマスの良い思い出になってくれていたら嬉しいです。
+                                </p>
+                                <img src="images\article\23_christmas\画像4.jpg">
+                                <p></p>
+                                <p>
+                                    最後になりましたが、今回ともにイベントを開催していただきました株式会社四ツ橋の皆様、そして参加してくださった皆様、
+                                    本当にありがとうございました。
+                                </p>
+                                <p>
+                                    海
+                                </p>
+								
+                                </section>
+                            </article>
+                    </div>
+				</div>
+
+			<!-- Footer -->
+				<div id="footer"></div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="javascript/jquery.dropotron.min.js"></script>
+			<script src="javascript/skel.min.js"></script>
+			<script src="javascript/skel-viewport.min.js"></script>
+			<script src="javascript/util.js"></script>
+			<!--[if lte IE 8]><script src="javascript/respond.min.js"></script><![endif]-->
+
+	</body>
+</html>
