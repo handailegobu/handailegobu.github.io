@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>ページタイトル</title>
+        <link rel="icon" href="/images/logo.png">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="javascript/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="sass/ie8.scss" /><![endif]-->
+		<script src="https://kit.fontawesome.com/652f16b4e9.js" crossorigin="anonymous"></script>
+
+		<!--common HTML parts-->
+		<script src="/javascript/jquery.min.js"></script>
+		<script>
+			$(function () {
+				$("#topHeader").load("/commonHTML/header.html h1, #nav", function() {
+					currentPos = 1;
+					$.getScript("/javascript/jquery.dropotron.min.js", function(){});
+					$.getScript("/javascript/skel.min.js", function(){});
+					$.getScript("/javascript/skel-viewport.min.js", function(){});
+					$.getScript("/javascript/util.js", function(){});
+					$.getScript("/javascript/main.js", function(){});
+				});
+				$("#footer").load("/commonHTML/footer.html");
+			});
+		</script>
+    </head>
+    <body class="no-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<div id="header">
+
+						<div id="topHeader"></div>
+
+					</div>
+				</div>
+
+			<!-- Main -->
+				<div id="main-wrapper">
+					<div class="container">
+
+                        <!-- Content -->
+                            <article class="box post">
+                                <section>
+                                <header>
+                                    <h2>まちなかリビング</h2>
+                                </header>
+								
+                                <p>
+									　こんにちは。大阪大学レゴ部1回のF・れんこん。です。
+                            
+                                </p>
+                                <p>
+                                    この度吹田市のまちなかリビングにてワークショップを開催しました。2022年11月に開館したばかりの施設ということで、とてもきれいで窓も大きく解放感のある良い場所でした。
+                                </p>
+                                <ul>
+                                    <li>
+                                        開催日時：2023年10月8日(日)
+
+                                    </li>
+                                    <li>
+                                        開催場所：まちなかリビング北千里（大阪府吹田市古江台）
+                                    </li>
+                                    <li>
+                                        参加人数：部員2人、一般参加者約30人（午前の部約15人、午後の部約15人）
+                                    </li>
+                                    <li>
+                                        企画内容：大阪大学レゴ部主催　大学生とブロックであそぼう！
+                                    </li>
+                                </ul>
+                                    
+                                
+                                <p>
+                                    今回のワークショップは午前の部（～小学2年生対象）と午後の部（小学3～6年生対象）の２部からなり、午前の部では折りたたみ椅子（兼スマホ立て）を、午後の部では四つ足ロボットを作ってもらいました。あまり天気は優れない日でしたが多くの方々にご参加いただきました。
+                                </p>
+                                <p>
+                                    折りたたみ椅子については2つの板の交差部分にトラス構造という仕組みを応用しています。この構造は三角形の部分で力を分散させて支えるというもので、東京スカイツリーや橋などに使われている構造です。この話をすると保護者の方々からも感嘆の声が上がりました。また四つ足ロボットについてはモーターも組み込むのでスイッチを押すと実際に歩かせることができます。さらに歯車などを組み替えることでその歩く速さを変えることもでき、完成した子にはより速く動かすにはどうすればよいか考えて改造してもらいました。
+                                </p>
+                                <p>折りたたみ椅子も四つ足ロボットも棒が飛び出していないか、足が平行にできているかなど細かい調整の必要な部分があるので苦戦していた子もいて私たちも少し手助けをしましたが、中にはすぐに完成し、四つ足ロボットについては改造までできている子がいて驚きました。
+
+                                </p>
+								<p>私自身初めてのワークショップだったので始まる前まで緊張した状態で前に立っていましたが、元気いっぱいの子供たちと関わるうちにいつしか緊張もなくなり、ただただ元気をもらいました。また折りたたみ椅子を閉じてカメラ！と言っていた子がいて、子供の頭って柔軟だなあと改めて感じました。阪大レゴ部の看板にも子供たちがかなり興味を示していて嬉しかったです。
+                                </p>
+                                <p>
+                                    会場にも本を何冊か展示していましたが他にも図書館には多くのレゴに関する本があり、かなり子供の人気が高いそうです。このワークショップを機にこれらの本を借りてもっとレゴのことを知り、このままレゴを続けていってもらえたら嬉しいと思います。
+                                </p>
+                                <p>
+                                    最後になりますが、本ワークショップにご参加頂いた方々、企画準備して頂いたまちなかリビングの方々、本当にありがとうございました。
+                                </p>
+                                <p>
+                                    F・れんこん。
+                                </p>
+                                
+                                
+								
+								
+                                </section>
+                            </article>
+                    </div>
+				</div>
+
+			<!-- Footer -->
+				<div id="footer"></div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="/javascript/jquery.dropotron.min.js"></script>
+			<script src="/javascript/skel.min.js"></script>
+			<script src="/javascript/skel-viewport.min.js"></script>
+			<script src="/javascript/util.js"></script>
+			<!--[if lte IE 8]><script src="javascript/respond.min.js"></script><![endif]-->
+
+	</body>
+</html>

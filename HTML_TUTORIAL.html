@@ -3,27 +3,27 @@
 <html>
     <head>
         <title>ページタイトル</title>
-        <link rel="icon" href="images/logo.png">
+        <link rel="icon" href="/images/logo.png">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="javascript/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="sass/ie8.scss" /><![endif]-->
 		<script src="https://kit.fontawesome.com/652f16b4e9.js" crossorigin="anonymous"></script>
 
 		<!--common HTML parts-->
-		<script src="javascript/jquery.min.js"></script>
+		<script src="/javascript/jquery.min.js"></script>
 		<script>
 			$(function () {
-				$("#topHeader").load("commonHTML/header.html h1, #nav", function() {
+				$("#topHeader").load("/commonHTML/header.html h1, #nav", function() {
 					currentPos = 1;
-					$.getScript("javascript/jquery.dropotron.min.js", function(){});
-					$.getScript("javascript/skel.min.js", function(){});
-					$.getScript("javascript/skel-viewport.min.js", function(){});
-					$.getScript("javascript/util.js", function(){});
-					$.getScript("javascript/main.js", function(){});
+					$.getScript("/javascript/jquery.dropotron.min.js", function(){});
+					$.getScript("/javascript/skel.min.js", function(){});
+					$.getScript("/javascript/skel-viewport.min.js", function(){});
+					$.getScript("/javascript/util.js", function(){});
+					$.getScript("/javascript/main.js", function(){});
 				});
-				$("#footer").load("commonHTML/footer.html");
+				$("#footer").load("/commonHTML/footer.html");
 			});
 		</script>
     </head>
@@ -49,11 +49,20 @@
                                 <header>
                                     <h2>メインタイトル</h2>
                                 </header>
-								<h3>サブタイトル</h3>
                                 <p>
 									本文：
                                 </p>
-                                
+								<p>例：
+									文中に画像を貼りたい場合は、imgタグを使ってください。
+									<img src="ここに貼りたい画像の相対パスを貼る.jpg"> 
+									
+									相対パスはvscodeの場合左に出るファイル一覧上でファイルを右クリックするとコピーすることができます。
+									ワークショップの画像はimages > article のフォルダの中に記事用のフォルダを作成してその中に配置してください。
+									配置例↓
+									images > article > 23_gazouFolder_Rei
+									<img src="/images/article/23_gazouFolder_Rei/gazou_Rei.gif" >
+								</p>
+                                <h3>サブタイトル</h3>
                                 
 								
 								
@@ -68,10 +77,10 @@
 		</div>
 
 		<!-- Scripts -->
-			<script src="javascript/jquery.dropotron.min.js"></script>
-			<script src="javascript/skel.min.js"></script>
-			<script src="javascript/skel-viewport.min.js"></script>
-			<script src="javascript/util.js"></script>
+			<script src="/javascript/jquery.dropotron.min.js"></script>
+			<script src="/javascript/skel.min.js"></script>
+			<script src="/javascript/skel-viewport.min.js"></script>
+			<script src="/javascript/util.js"></script>
 			<!--[if lte IE 8]><script src="javascript/respond.min.js"></script><![endif]-->
 
 	</body>

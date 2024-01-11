@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>大阪大学レゴ部 2019秋コンテスト</title>
+		<link rel="icon" href="/images/logo.png">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="javascript/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="sass/ie8.scss" /><![endif]-->
+		<script src="https://kit.fontawesome.com/652f16b4e9.js" crossorigin="anonymous"></script>
+
+		<!--common HTML parts-->
+		<script src="/javascript/jquery.min.js"></script>
+		<script>
+			$(function () {
+				$("#topHeader").load("/commonHTML/header.html h1, #nav", function() {
+					currentPos = 2;
+					$.getScript("/javascript/jquery.dropotron.min.js", function(){});
+					$.getScript("/javascript/skel.min.js", function(){});
+					$.getScript("/javascript/skel-viewport.min.js", function(){});
+					$.getScript("/javascript/util.js", function(){});
+					$.getScript("/javascript/main.js", function(){});
+				});
+				$("#footer").load("/commonHTML/footer.html");
+			});
+		</script>
+	</head>
+	<body class="no-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<div id="header">
+
+						<div id="topHeader"></div>
+
+					</div>
+				</div>
+
+			<!-- Main -->
+				<div id="main-wrapper">
+					<div class="container">
+
+						<!-- Content -->
+							<article class="box post">
+								<header>
+									<h2>2019年秋 第8回オリジナル作品コンテストを開催！！！</h2>
+								</header>
+								<p></p>
+
+								<h3>結果発表！</h3>
+
+								<p>今回も個性溢れるたくさんの作品をご応募いただきありがとうございました。その中から、厳正なる選考を勝ち抜き、まちかね祭で決勝ラウンドに参加した３作品をご紹介いたします。</p>
+
+								<p></p>
+								<h4>最優秀賞&nbsp;&nbsp;&nbsp;&nbsp;コウチャローさん 「ガチャガチャ」</h4>
+								<img src="/images/contest/2019fall/1.png">
+								<p>こんなに小さいのにお金を入れるところがあったりカプセルが入ってたりと、とってもリアルなガチャガチャ。前半分のブロックが逆さまになっててリアルさを上げているのもポイント高い！</p>
+
+								<p></p>
+								<h4>優秀賞&nbsp;&nbsp;&nbsp;&nbsp;原田 海里さん 「森の中のクリスマスツリー」</h4>
+								<img src="/images/contest/2019fall/2.png">
+								<p>次のクリスマスまで待ちきれないので、ツリーを開けてサンタさんの仕事をこっそりのぞいちゃおう！周りにいるうさぎさんもとってもキュート。おまけに星の力でツリーの中を温かく照らします。</p>
+
+								<p></p>
+								<h4>優秀賞&nbsp;&nbsp;&nbsp;&nbsp;キーさん 「漁船」</h4>
+								<img src="/images/contest/2019fall/3.png">
+								<p>ほとんどのブロックが逆さまになって作られている珍しい作品。写真からは見えませんが、スクリューはちゃんと方向が変えられ、リールの部分はタイヤのホイールで再現！この船で漁をすれば、「大漁」の旗をたなびかせて帰ってくるでしょう！</p>
+							</article>
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<div id="footer"></div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="/javascript/jquery.dropotron.min.js"></script>
+			<script src="/javascript/skel.min.js"></script>
+			<script src="/javascript/skel-viewport.min.js"></script>
+			<script src="/javascript/util.js"></script>
+			<!--[if lte IE 8]><script src="javascript/respond.min.js"></script><![endif]-->
+
+	</body>
+</html>

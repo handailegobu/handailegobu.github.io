@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>大阪大学レゴ部　2023いちょう祭</title>
+        <link rel="icon" href="/images/logo.png">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="javascript/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="sass/ie8.scss" /><![endif]-->
+		<script src="https://kit.fontawesome.com/652f16b4e9.js" crossorigin="anonymous"></script>
+
+		<!--common HTML parts-->
+		<script src="/javascript/jquery.min.js"></script>
+		<script>
+			$(function () {
+				$("#topHeader").load("/commonHTML/header.html h1, #nav", function() {
+					currentPos = 1;
+					$.getScript("/javascript/jquery.dropotron.min.js", function(){});
+					$.getScript("/javascript/skel.min.js", function(){});
+					$.getScript("/javascript/skel-viewport.min.js", function(){});
+					$.getScript("/javascript/util.js", function(){});
+					$.getScript("/javascript/main.js", function(){});
+				});
+				$("#footer").load("/commonHTML/footer.html");
+			});
+		</script>
+    </head>
+    <body class="no-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<div id="header">
+
+						<div id="topHeader"></div>
+
+					</div>
+				</div>
+
+			<!-- Main -->
+				<div id="main-wrapper">
+					<div class="container">
+
+                        <!-- Content -->
+                            <article class="box post">
+                                <section>
+                                <header>
+                                    <h2>2023年度いちょう祭</h2>
+                                </header>
+                                <p>
+                                    　今年も2023年度いちょう祭で二日間展示を行いました。
+                                </p>
+                                <p>
+                                    　来場者は、一日目は887人、二日目は470人であり、合計1357人の方に来場いただきました。また、昨年度のまちかね祭同様、受付で寄付を募りましたところ、一日目に255人、二日目に132人、合計で387人の方に寄付していただきました。寄付してくださった皆様、ご支援いただきありがとうございました。
+                                </p>
+                                <p>
+                                    　今回の学園祭では新たな試みとして、長年使っていた展示教室を変更することにしました。この教室は、以前の教室とは異なり自由に机やイスを動かすことができます。これまでの学園祭では通路が狭いことが問題となっていましたが、机を自由に配置できる教室にしたことでこの問題が解決し、快適に展示を見ていただけるようになったと思います。教室自体の面積は狭くなってしまいましたが、アンケートを紙媒体で行わずgoogleフォームのみで実施したことで展示するスペースは十分に確保することができました。
+                                </p>
+                                <p>
+                                    　いままで展示してきた昨年部員で制作した合作、GBC、個人作品、OBさんの作品などのほかに、今年は部内で募ったコンペティションの作品を５つ展示し、来場者の方々に投票をしていただきました。お題は「映画やアニメ、ゲームなどの人気作品の名シーンを再現せよ」というものでした。結果は、
+                                </p>
+                                <ul style="list-style: none; font-size: 1.2em">
+                                    <li>1位　カルシファー</li>
+                                    <img src="/images/gallery/23_ichou/DSC_1083.JPG" alt="">
+                                    <li>2位　喫茶ハトの巣　大阪店</li>
+                                    <img src="/images/gallery/23_ichou/S__1433608.jpg" alt="">
+                                    
+                                    <li>3位　209番道路⇔ズイタウン⇔210番道路</li>
+                                    <img src="/images/gallery/23_ichou/S__27967492.jpg" alt="">
+                                </ul>
+                                <p>
+                                    となりました。たくさんの投票ありがとうございました。
+                                </p>
+                                <p>
+                                    最後に、来場してくださった方々、そして展示に携わって下さった方々、本当にありがとうございました。ぜひ次の待ちかね祭もどうぞよろしくお願いいたします。
+                                </p>
+								<p>
+									オレオ
+								</p>
+                                </section>
+                            </article>
+                    </div>
+				</div>
+
+			<!-- Footer -->
+				<div id="footer"></div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="/javascript/jquery.dropotron.min.js"></script>
+			<script src="/javascript/skel.min.js"></script>
+			<script src="/javascript/skel-viewport.min.js"></script>
+			<script src="/javascript/util.js"></script>
+			<!--[if lte IE 8]><script src="javascript/respond.min.js"></script><![endif]-->
+
+	</body>
+</html>
