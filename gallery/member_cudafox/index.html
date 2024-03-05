@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>作品集｜大阪大学レゴ部</title>
+		<link rel="icon" href="/images/logo.png">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="javascript/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="sass/ie8.scss" /><![endif]-->
+		<script src="https://kit.fontawesome.com/652f16b4e9.js" crossorigin="anonymous"></script>
+
+		<!--common HTML parts-->
+		<script src="/javascript/jquery.min.js"></script>
+		<script>
+			$(function () {
+				$("#topHeader").load("/commonHTML/header.html h1, #nav", function() {
+					currentPos = 2;
+					$.getScript("/javascript/jquery.dropotron.min.js", function(){});
+					$.getScript("/javascript/skel.min.js", function(){});
+					$.getScript("/javascript/skel-viewport.min.js", function(){});
+					$.getScript("/javascript/util.js", function(){});
+					$.getScript("/javascript/main.js", function(){});
+				});
+				$("#footer").load("/commonHTML/footer.html");
+			});
+		</script>
+	</head>
+	<body class="left-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<div id="header">
+
+						<div id="topHeader"></div>
+
+					</div>
+				</div>
+
+			<!-- Main -->
+				<div id="main-wrapper">
+					<div class="container">
+
+                        <!-- Content -->
+                            
+                            <section class="box">
+                                <h2>CUDA狐の作品棚</h2>
+                                <p>こんにちは！！阪大レゴ部のCUDA狐です．いつもホームページをご覧いただきありがとうございます．<br>阪大レゴ部で作った作品をもっと見たい！！という要望にお応えして，この度ホームページ上に部員の作品棚を制作することになりました．<br>他の部員の作品棚も頑張って製作してもらいます笑<br>まだ準備中なのでとくに作品紹介もない無味乾燥なページですが，今後更新予定なのでぜひお楽しみに！！<br>更新後はレゴ部ホームページのトップで最新情報として告知致します♪</p>
+                            </section>
+
+                        <!-- Sidebar -->
+                            
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<div id="footer"></div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="/javascript/jquery.dropotron.min.js"></script>
+			<script src="/javascript/skel.min.js"></script>
+			<script src="/javascript/skel-viewport.min.js"></script>
+			<script src="/javascript/util.js"></script>
+			<!--[if lte IE 8]><script src="javascript/respond.min.js"></script><![endif]-->
+
+	</body>
+</html>
