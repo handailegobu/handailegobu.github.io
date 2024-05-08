@@ -2,6 +2,16 @@
 
 <html>
     <head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-EXMSWLBNQG"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-EXMSWLBNQG');
+		</script>
+
         <title>ページタイトル｜大阪大学レゴ部</title>
         <link rel="icon" href="/images/logo.png">
 		<meta charset="utf-8" />
@@ -16,7 +26,7 @@
 		<script>
 			$(function () {
 				$("#topHeader").load("/commonHTML/header.html h1, #nav", function() {
-					currentPos = 1;
+					currentPos = 2;
 					$.getScript("/javascript/jquery.dropotron.min.js", function(){});
 					$.getScript("/javascript/skel.min.js", function(){});
 					$.getScript("/javascript/skel-viewport.min.js", function(){});
