@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="ja">
+<!--
+
+--------------------------------------------------
+
+    webページ編集者の方へ
+    
+    コードの最後の方に公開日時を入力してください！
+
+--------------------------------------------------
+
+-->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>天動説による惑星の運動モデル｜部員の作品棚：ヤスタジャン｜作品集｜大阪大学レゴ部</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stars" aria-hidden="true"></div>
+
+    <header>
+        <div class="site-title">
+            <span class="nowrap">天動説による</span>
+            <span class="nowrap">惑星の運動モデル</span>
+        </div>
+        <!--
+        <nav aria-label="メインナビ">
+            <a href="#intro">惑星の不思議な動き</a>
+            <a href="#venus">2つめの見出し</a>
+            <a href="#mars">Mars</a>
+            <a href="#about">About</a>
+        </nav>
+        -->
+    </header>
+
+    <main id="app">
+        <figure>
+            <img src="/images/gallery/member_yasutajan/work.png" alt="作品の写真">
+        </figure>
+
+        <section class="section">
+        <div class="container inner">
+            <h1 class="heading"> 惑星の不思議な動き</h1>
+            <p class="lead">
+                はるか昔、まだ夜を照らす街灯もなかったころ、空に広がるたくさんの星は、今よりずっと明るく、そして美しく見えたことでしょう。<br>
+                人々は長い時間をかけて夜空を観察し、星には二つの種類があることに気づきました。
+            </p>
+            <p class="lead">
+                ひとつは、毎晩規則正しく動いていき、1年たつと同じ場所に戻ってくる<b>恒星</b>です。<br>
+                もうひとつは、星座の中を不規則に動き、ときには恒星とは逆向きに進んでさえ見える<b>惑星</b>です。<br>
+                金星や火星などがその例です。
+            </p>
+            <figure>
+                <img src="/images/gallery/member_yasutajan/mars_motion.png" alt="火星の動き">
+                <figcaption>
+                    <span class="reference">
+                        <a href="https://commons.m.wikimedia.org/wiki/File:Apparent_retrograde_motion_of_Mars_in_2003-frame-78.png" target="_blank">
+                            Wikimedia Commons
+                        </a>
+                    </span><br>
+                    図1: 地球から見える火星の動き(黄色の線)<br>
+                    8月1日に進路を西に変え、10月1日にまた東へと進むという不規則な動きをしている
+                </figcaption>
+            </figure>
+            <p class="lead">
+                古代の人々は、地球が宇宙のまん中にじっと止まっていて、そのまわりを星々が回っていると考えました。
+            <sup>
+                <span class="nowrap note-trigger" data-note=
+                    "古代の学者の中にも、地球が動いていると考えたフィロラオス(紀元前5世紀)や、さらには地球を含む惑星が太陽のまわりを回っていると考えたアリスタルコス(紀元前4世紀)がいました。
+                    しかし、当時この考えは主流ではありませんでした。"
+                    >
+                    注1
+                </span>
+            </sup><br>
+            これを<b>天動説</b>といいます。
+            </p>
+            <p class="lead">
+            しかし、惑星が地球を中心とする円の上を回っているわけではないことは、その不規則な動きから分かっていました。<br>
+            この不思議な惑星の動きを説明するために、多くの学者が工夫を重ねました。<br>
+            そして古代ギリシャの学者<b>プトレマイオス</b>は、それまでの研究をまとめ、『アルマゲスト』という本を書きました。
+            </p>
+        </div>
+<!--<div class="orbiter" aria-hidden="true"></div>-->
+        </section>
+
+        <section class="section">
+        <div class="container inner">
+            <h1 class="heading">プトレマイオスの天動説</h1>
+            <p class="lead">
+                プトレマイオスは、惑星の動きを説明するために、<b>周転円</b>と<b>従円</b>
+                <sup>
+                    <span class="nowrap note-trigger" data-note=
+                        "従円は、導円や離心円、搬送円とも呼ばれます。"
+                        >
+                        注2
+                    </span>
+                </sup>
+                という二つの円を使いました。
+                <sup>
+                    <span class="nowrap note-trigger" data-note=
+                        "周転円と従円のアイデアを初めて出したのはプトレマイオスではありません。
+                        アポロニウスやヒッパルコスであると言われていますが、詳しいことは分かっていません。"
+                        >
+                        注3
+                    </span>
+                </sup><br>
+                惑星は周転円の上を回り、その周転円の中心は地球のすぐそばを中心とする従円の上を回っているとしたのです。
+                <sup>
+                    <span class="nowrap note-trigger" data-note=
+                        "プトレマイオスは、今でいう「惑星が円ではなく楕円（ゆがんだ円）の上を動いていること」を表すために、従円の中心を地球から少しだけずらしました。"
+                        >
+                        注4
+                    </span>
+                </sup><br>
+                この仕組みはとてもよくできていて、惑星が空のどこに現れるかをおおよそ言い当てることができました。
+            </p>
+            <figure>
+                <img src="/images/gallery/member_yasutajan/geocentrism.png" alt="天動説">
+                <figcaption>
+                    図2: プトレマイオスの考えた惑星の動きの説明
+                    <span class="nowrap note-trigger" data-note=
+                        "この図では、分かりやすくするために、プトレマイオスの説明とは違うのですが従円の中心は地球にしています。
+                        また、プトレマイオスの説では、従円に対して周転円を少し傾けていました。
+                        難しい話になりますが、これは現在の言葉でいうと、地球と惑星の公転面の傾きの違いを考慮していたことになります。"
+                        >
+                        (注5)
+                    </span><br>
+                    惑星は周転円の上を回り、その周転円の中心は地球のすぐそばを中心とする従円の上を回る
+                </figcaption>
+            </figure>
+            <p class="lead">
+                実は、このプトレマイオスの考えを少し直すと、地球は太陽のまわりを回るという<b>地動説</b>とほとんど同じになります。
+                <sup>
+                    <span class="nowrap note-trigger" data-note=
+                        "ただしプトレマイオスの説では、地球や他の惑星が楕円（ゆがんだ円）の上を動いていることまでは表現できていませんでした。
+                        またプトレマイオスは、地球と他の惑星までの実際の距離については正しい知識を持っていませんでした。"
+                        >
+                        注6
+                    </span>
+                </sup><br>
+                例えば金星については、周転円の中心を太陽におき、太陽を止めて地球や金星を動かすと、地動説そのものになるのです。
+                <sup>
+                    <span class="nowrap note-trigger" data-note=
+                        "金星のような、太陽と地球の間にある惑星に関しては、周転円の中心は太陽にあたります。
+                        しかし、火星のような地球より外側にある惑星に関してはそうではありません。
+                        難しい話になりますが、円運動の合成の順番が逆になっているからです。"
+                        >
+                        注7
+                    </span>
+                </sup>
+            </p>
+        </div>
+        </section>
+
+        <section class="section">
+        <div class="container inner">
+            <h1 class="heading">
+                プトレマイオスの測定の精密さ
+            </h1>
+            <p class="lead">
+                プトレマイオスは、惑星や周転円の中心が動く周期や、従円と周転円の大きさの比率をとても正確に計算していました。<br>
+                例えば、金星と地球が最も近づく時間の間隔は583.934日としていましたが、
+                <sup>
+                    <span class="nowrap note-trigger" data-note=
+                        "プトレマイオスは「409エジプト年と167日間に金星は255回地球に最も近づいて、さらに周転円上を338°25'だけ進んだ」と記しています。[3]p.437"
+                        >
+                        注8
+                    </span>
+                </sup>
+                これは現在知られている値583.918日にとても近いものでした。
+                <sup>
+                    <span class="nowrap note-trigger" data-note=
+                        "地球や他の惑星が太陽のまわりを一周する時間は、現代とプトレマイオスの時代で異なりますが、その差は0.001日程度のため、無視できます。"
+                        >
+                        注9
+                    </span>
+                </sup>
+            </p>
+            <div class="scrollable">
+                <table cellspacing="0" cellpadding="6">
+                    <thead>
+                        <tr>
+                            <th><span class="nowrap">地動説に基づく数値</span></th>
+                            <th><span class="nowrap">現在</span><span class="nowrap">知られている値</span></th>
+                            <th><span class="nowrap">プトレマイオスが</span><span class="nowrap">求めた値</span></th>
+                            <th><span class="nowrap">天動説に基づく数値</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="nowrap">太陽・金星の距離</span><br>
+                                <span class="nowrap">
+                                    ÷ 太陽・地球の距離
+                                    <sup>
+                                        <span class="nowrap note-trigger" data-note=
+                                            "難しい話になりますが、太陽から地球や他の惑星の距離は平均距離、つまり軌道長半径で計算しました。"
+                                            >
+                                            注10
+                                        </span>
+                                    </sup>
+                                </span>
+                            </td>
+                            <td>0.723</td>
+                            <td>0.719</td>
+                            <td>
+                                <span class="nowrap">金星の周転円の半径</span><br><span class="nowrap">÷ 金星の従円の半径</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="nowrap">地球と金星が</span><span class="nowrap">最も近づく時間の間隔(日)</span></td>
+                            <td>583.918</td>
+                            <td>583.934</td>
+                            <td><span class="nowrap">地球と金星が</span><span class="nowrap">最も近づく時間の間隔(日)</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="nowrap">太陽・火星の距離</span><br><span class="nowrap">÷ 太陽・地球の距離</span></td>
+                            <td>1.524</td>
+                            <td>1.519</td>
+                            <td><span class="nowrap">火星の従円の半径</span><br><span class="nowrap">÷ 火星の周転円の半径</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="nowrap">地球と火星が</span><span class="nowrap">最も近づく時間の間隔(日)</span></td>
+                            <td>779.880</td>
+                            <td>779.937</td>
+                            <td>
+                                <span class="nowrap">地球と火星が</span>
+                                <span class="nowrap">
+                                    最も近づく時間の間隔(日)
+                                    <sup>
+                                        <span class="nowrap note-trigger" data-note=
+                                            "プトレマイオスは「410エジプト年と約231日と2/3日間に火星は192回地球に最も近づいて、さらに周転円上を61°43'だけ進んだ」と記しています。[3]p.458"
+                                            >
+                                            注11
+                                        </span>
+                                    </sup>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        </section>
+
+        <section class="section">
+            <div class="container inner">
+                <h1 class="heading">この作品について</h1>
+                <figure>
+                    <img src="/images/gallery/member_yasutajan/work.png" alt="作品の写真">
+                    <figcaption>
+                        図3: 天動説による惑星の運動モデル
+                    </figcaption>
+                </figure>
+                <p class="lead">
+                    この作品「天動説による惑星の運動モデル」は、プトレマイオスの考えた宇宙の様子を表したものです。<br>
+                    土台の中心には地球が固定されています。<br>
+                    モーターを動かすと、惑星がついた部品が地球のまわりを回ると同時に、惑星がその部品のまわりを回ります。<br>
+                    ただし、金星と火星を同時に動かすことは難しかったので、それぞれ別の部品を用意し、入れかえられるようにしました。
+                </p>
+                <figure>
+                    <img src="/images/gallery/member_yasutajan/work_description.png" alt="作品の説明">
+                    <figcaption>
+                        図4: 作品が動く様子<br>
+                        惑星がついた部品が地球のまわりを回ると同時に、惑星がその部品のまわりを回る
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="/images/gallery/member_yasutajan/venus_and_mars.png" alt="金星と火星の模型">
+                    <figcaption>
+                        図5: 金星と火星の模型<br>
+                        左側が金星の模型で、右側が火星の模型。どちらも地球のついた土台に取り付けられる
+                    </figcaption>
+                </figure>
+                <p class="lead">
+                    周転円の半径は、微調整ができるようになっています。<br>
+                    その部分を調整して、従円と周転円の半径の比をプトレマイオスの求めた値とほぼ同じにしています。
+                </p>
+                <p class="lead">
+                    また、惑星や周転円の中心が動く周期は、歯車を複雑に組み合わせて、プトレマイオスが求めた値にできるだけ近づけました。<br>
+                    <div class="scrollable">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>
+                                        <span class="nowrap">この作品で</span><span class="nowrap">表現した値</span>
+                                        <sup>
+                                            <span class="nowrap note-trigger" data-note=
+                                                "ここに記載したのは、理論的な回転数の比による値です。歯車と歯車の間には、小さなすき間があります。
+                                                このため、理論的な回転数の比と実際の回転数の比には違いがあります。"
+                                                >
+                                                注12
+                                            </span>
+                                        </sup>
+                                    </th>
+                                    <th>
+                                        <span class="nowrap">プトレマイオスが</span><span class="nowrap">求めた値</span>
+                                        <sup>
+                                            <span class="nowrap note-trigger" data-note=
+                                                "プトレマイオスは、地球が太陽のまわりを一周する時間を「365日と14/60日と48/3600日」と考えていました。[2]p.118
+                                                この数値を使って、プトレマイオスの求めた値を年単位に直しています。"
+                                                >
+                                                注13
+                                            </span>
+                                        </sup>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span class="nowrap">地球と金星が最も近づく</span><span class="nowrap">時間の間隔&nbsp;(年)</span>
+                                        <sup>
+                                            <span class="nowrap note-trigger" data-note=
+                                                "正確には、地球と金星が最も近づく時間の間隔を、周転円の中心が従円を一周する時間で割った値です。"
+                                                >
+                                                注14
+                                            </span>
+                                        </sup>
+                                    </td>
+                                    <td>
+                                        <span class="nowrap">8/5&nbsp;=&nbsp;1.6</span>
+                                    </td>
+                                    <td>
+                                        <span class="nowrap">1.59874</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="nowrap">地球と火星が最も近づく</span><span class="nowrap"></span>時間の間隔&nbsp;(年)</span>
+                                        <sup>
+                                            <span class="nowrap note-trigger" data-note=
+                                                "正確には、地球と火星が最も近づく時間の間隔を、火星が周転円を一周する時間で割った値です。"
+                                                >
+                                                注15
+                                            </span>
+                                        </sup>
+                                    </td>
+                                    <td>
+                                        <span class="nowrap">79/37&nbsp;=&nbsp;2.13514</span>
+                                    </td>
+                                    <td>
+                                        <span class="nowrap">2.13537</span>
+                                    </td>
+                            </tbody>
+                        </table>
+                    </div>
+                </p>
+                <p class="lead">
+                    この「天動説による惑星の運動モデル」は、まちかね祭などの学園祭で展示する予定です。<br>
+                    まちかね祭へお越しの際は、ご覧いただけると幸いです。
+                </p>
+        </section>
+
+        <section class="section">
+        <div class="container inner">
+            <p class="lead"><b>参考文献</b><br>
+                [1] 藤原邦男『基礎物理学1 物理学序論としての力学』東京大学出版会 (2022)<br>
+                [2] C. プトレマイオス, 藪内清 訳『アルマゲスト上』恒星社厚生閣 (1958)<br>
+                [3] C. プトレマイオス, 藪内清 訳『アルマゲスト下』恒星社厚生閣 (1958)<br>
+                [4] J. シャロン, 中山茂 訳『宇宙論の歩み』平凡社 (1971)<br>
+                [5] David R. Williams,
+                    <a href="https://web.archive.org/web/20250820171848/https://nssdc.gsfc.nasa.gov/planetary/factsheet/venusfact.html" target="_blank">“Venus Fact Sheet”</a>
+                    NASA Goddard Space Flight Center (2024)<br>
+                最終閲覧日: 2025年9月12日<br>
+                [6] David R. Williams,
+                    <a href="https://web.archive.org/web/20200317184127/https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html" target="_blank">“Mars Fact Sheet”</a>
+                    NASA Goddard Space Flight Center (2018)<br>
+                最終閲覧日: 2025年9月12日<br>
+                [7] Arnold H.Rots, Peter S.Bunclark “Representations of time coordinates in FITS”<br>
+                Astronomy and Astrophysics, vol574, A36 (2015)<br>
+            </p>
+            <p class="lead">
+                <b>更新履歴</b><br>
+                
+
+<!--
+
+--------------------------------------------------
+
+    webページ編集者の方へ
+
+    この下に公開日時を入力してください！
+
+--------------------------------------------------
+
+-->
+
+                2025年10月4日&nbsp;公開
+            </p>
+        </div>
+        </section>
+    </main>
+
+    <footer>
+        <span class="muted">天動説による惑星の運動モデル</span><br>
+        <span class="muted">大阪大学レゴ部 ヤスタジャン</span>
+    </footer>
+
+    <div id="tooltip" class="tooltip"></div>
+    <script src="script.js"></script>
+</body>
+</html>

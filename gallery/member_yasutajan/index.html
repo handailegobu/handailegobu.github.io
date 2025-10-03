@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-EXMSWLBNQG"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-EXMSWLBNQG');
+		</script>
+
+		<title>部員の作品棚：ヤスタジャン｜作品集｜大阪大学レゴ部</title>
+		<link rel="icon" href="/images/logo.png">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="javascript/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="sass/ie8.scss" /><![endif]-->
+		<script src="https://kit.fontawesome.com/652f16b4e9.js" crossorigin="anonymous"></script>
+
+		<!--common HTML parts-->
+		<script src="/javascript/jquery.min.js"></script>
+		<script>
+			$(function () {
+				$("#topHeader").load("/commonHTML/header.html h1, #nav", function() {
+					currentPos = 2;
+					$.getScript("/javascript/jquery.dropotron.min.js", function(){});
+					$.getScript("/javascript/skel.min.js", function(){});
+					$.getScript("/javascript/skel-viewport.min.js", function(){});
+					$.getScript("/javascript/util.js", function(){});
+					$.getScript("/javascript/main.js", function(){});
+				});
+				$("#footer").load("/commonHTML/footer.html");
+			});
+		</script>
+	</head>
+	<body class="left-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<div id="header">
+
+						<div id="topHeader"></div>
+
+					</div>
+				</div>
+
+			<!-- Main -->
+				<div id="main-wrapper">
+					<div class="container">
+
+                        <!-- Content -->
+                            
+								<section class="box">
+									<h2>ヤスタジャンの作品棚</h2>
+									<p></p>
+									<div class="row">
+										<div class="2u 2u(mobile)">
+											<img src="/images/gallery/thumbnail/yasutajan_icon.png">
+										</div>
+										<div class="10u 10u(mobile)">
+											<h3>自己紹介</h3>
+											<p>
+												記事をご覧いただきありがとうございます！<br>
+												年に1回くらいテクニック作品を作っています。<br>
+												もしよければ作品の解説を見ていってください！	
+											</p>
+										</div>
+									</div>
+								</section>
+
+							<div class="row">
+								<div class="6u 12u(mobile)">
+									<section class="box">
+										<a href="/gallery/member_yasutajan/geocentric_model_of_planetary_motion.html">
+											<img width="480" src="/images/gallery/member_yasutajan/work.png">
+										</a>
+										<br>
+										<a href="/gallery/member_yasutajan/geocentric_model_of_planetary_motion.html">↑クリックして作品解説を見る↑</a>
+									</section>
+								</div>
+								<div class="6u 12u(mobile)">
+									<h3>天動説による惑星の運動モデル</h3>
+								</div>
+							</div>
+
+                        <!-- Sidebar -->
+                            
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<div id="footer"></div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="/javascript/jquery.dropotron.min.js"></script>
+			<script src="/javascript/skel.min.js"></script>
+			<script src="/javascript/skel-viewport.min.js"></script>
+			<script src="/javascript/util.js"></script>
+			<!--[if lte IE 8]><script src="javascript/respond.min.js"></script><![endif]-->
+
+	</body>
+</html>
