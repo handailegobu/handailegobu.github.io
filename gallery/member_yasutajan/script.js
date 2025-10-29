@@ -104,3 +104,51 @@ window.addEventListener('resize', () => {
     updateTooltipPosition(activeTrigger);
     }
 });
+
+
+// 目次自動生成
+document.addEventListener("DOMContentLoaded", () => {
+  const tocContainer = document.getElementById("table-of-contents");
+  if (!tocContainer) return;
+
+  const headings = document.querySelectorAll("main h1, main h2");
+  if (!headings.length) return;
+
+  const ul = document.createElement("ul");
+
+  headings.forEach((heading, index) => {
+    // idがなければ自動生成
+    if (!heading.id) heading.id = "section-" + index;
+
+    // --- ルビ対応部分 ---
+    // heading内のテキストを複製し、<rt>だけ削除してから文字列化
+    const clone = heading.cloneNode(true);
+    clone.querySelectorAll("rt").forEach(rt => rt.remove());
+    const cleanText = clone.textContent.trim();
+    // ---------------------
+
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.href = "#" + heading.id;
+    a.textContent = cleanText;
+    a.classList.add("toc-" + heading.tagName.toLowerCase());
+    li.appendChild(a);
+    ul.appendChild(li);
+  });
+
+  tocContainer.appendChild(ul);
+
+  // スムーズスクロール
+  document.querySelectorAll('#table-of-contents a').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) {
+        window.scrollTo({
+          top: target.offsetTop - 60,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+});

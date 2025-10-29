@@ -19,42 +19,41 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="stars" aria-hidden="true"></div>
-
     <header>
         <div class="site-title">
-            <span class="nowrap">天動説による</span>
-            <span class="nowrap">惑星の運動モデル</span>
+            <span class="nowrap"><ruby>天動説<rt>てんどうせつ</rt>による</span>
+            <span class="nowrap"><ruby>惑星<rt>わくせい</rt></ruby>の運動モデル</span>
         </div>
-        <!--
-        <nav aria-label="メインナビ">
-            <a href="#intro">惑星の不思議な動き</a>
-            <a href="#venus">2つめの見出し</a>
-            <a href="#mars">Mars</a>
-            <a href="#about">About</a>
-        </nav>
-        -->
     </header>
 
     <main id="app">
         <figure>
-            <img src="/images/gallery/member_yasutajan/work.png" alt="作品の写真">
+            <img src="\images\gallery\member_yasutajan\work.png" alt="作品の写真">
         </figure>
 
+        <section id="toc" class="section">
+        <div class="inner">
+            <h2 class="heading">目次</h2>
+            <nav id="table-of-contents"></nav>
+        </div>
+        </section>
+        
         <section class="section">
         <div class="container inner">
-            <h1 class="heading"> 惑星の不思議な動き</h1>
+            <h1 class="heading">
+                <ruby>惑星<rt>わくせい</rt></ruby>の不思議な動き
+            </h1>
             <p class="lead">
                 はるか昔、まだ夜を照らす街灯もなかったころ、空に広がるたくさんの星は、今よりずっと明るく、そして美しく見えたことでしょう。<br>
                 人々は長い時間をかけて夜空を観察し、星には二つの種類があることに気づきました。
             </p>
             <p class="lead">
-                ひとつは、毎晩規則正しく動いていき、1年たつと同じ場所に戻ってくる<b>恒星</b>です。<br>
-                もうひとつは、星座の中を不規則に動き、ときには恒星とは逆向きに進んでさえ見える<b>惑星</b>です。<br>
+                ひとつは、毎晩規則正しく動いていき、1年たつと同じ場所に戻ってくる<b><ruby>恒星<rt>こうせい</rt></ruby></b>です。<br>
+                もうひとつは、星座の中を不規則に動き、ときには<ruby>恒星<rt>こうせい</rt></ruby>とは逆向きに進んでさえ見える<b><ruby>惑星<rt>わくせい</rt></ruby></b>です。<br>
                 金星や火星などがその例です。
             </p>
             <figure>
-                <img src="/images/gallery/member_yasutajan/mars_motion.png" alt="火星の動き">
+                <img src="\images\gallery\member_yasutajan\mars_motion.png" alt="火星の動き">
                 <figcaption>
                     <span class="reference">
                         <a href="https://commons.m.wikimedia.org/wiki/File:Apparent_retrograde_motion_of_Mars_in_2003-frame-78.png" target="_blank">
@@ -69,31 +68,33 @@
                 古代の人々は、地球が宇宙のまん中にじっと止まっていて、そのまわりを星々が回っていると考えました。
             <sup>
                 <span class="nowrap note-trigger" data-note=
-                    "古代の学者の中にも、地球が動いていると考えたフィロラオス(紀元前5世紀)や、さらには地球を含む惑星が太陽のまわりを回っていると考えたアリスタルコス(紀元前4世紀)がいました。
+                    "古代の学者の中にも、地球が動いていると考えたフィロラオス(紀元前5世紀)や、さらには地球を含む<ruby>惑星<rt>わくせい</rt></ruby>が太陽のまわりを回っていると考えたアリスタルコス(紀元前4世紀)がいました。
                     しかし、当時この考えは主流ではありませんでした。"
                     >
                     注1
                 </span>
             </sup><br>
-            これを<b>天動説</b>といいます。
+            これを<b><ruby>天動説<rt>てんどうせつ</rt></ruby></b>といいます。
             </p>
             <p class="lead">
-            しかし、惑星が地球を中心とする円の上を回っているわけではないことは、その不規則な動きから分かっていました。<br>
-            この不思議な惑星の動きを説明するために、多くの学者が工夫を重ねました。<br>
+            しかし、<ruby>惑星<rt>わくせい</rt></ruby>が地球を中心とする円の上を回っているわけではないことは、その不規則な動きから分かっていました。<br>
+            この不思議な<ruby>惑星<rt>わくせい</rt></ruby>の動きを説明するために、多くの学者が工夫を重ねました。<br>
             そして古代ギリシャの学者<b>プトレマイオス</b>は、それまでの研究をまとめ、『アルマゲスト』という本を書きました。
             </p>
         </div>
-<!--<div class="orbiter" aria-hidden="true"></div>-->
         </section>
 
+<!--<ruby><rt></rt></ruby>-->
         <section class="section">
         <div class="container inner">
-            <h1 class="heading">プトレマイオスの天動説</h1>
+            <h1 class="heading">
+                プトレマイオスの<ruby>天動説<rt>てんどうせつ</rt></ruby>
+            </h1>
             <p class="lead">
-                プトレマイオスは、惑星の動きを説明するために、<b>周転円</b>と<b>従円</b>
+                プトレマイオスは、<ruby>惑星<rt>わくせい</rt></ruby>の動きを説明するために、<b><ruby>周転円<rt>しゅうてんえん</rt></ruby></b>と<b><ruby>従円<rt>じゅうえん</rt></ruby></b>
                 <sup>
                     <span class="nowrap note-trigger" data-note=
-                        "従円は、導円や離心円、搬送円とも呼ばれます。"
+                        "<ruby>従円<rt>じゅうえん</rt></ruby>は、<ruby>導円<rt>どうえん</rt></ruby>や<ruby>離心円<rt>りしんえん</rt></ruby>、<ruby>搬送円<rt>はんそうえん</rt></ruby>とも呼ばれます。"
                         >
                         注2
                     </span>
@@ -101,51 +102,51 @@
                 という二つの円を使いました。
                 <sup>
                     <span class="nowrap note-trigger" data-note=
-                        "周転円と従円のアイデアを初めて出したのはプトレマイオスではありません。
+                        "<ruby>周転円<rt>しゅうてんえん</rt></ruby>と<ruby>従円<rt>じゅうえん</rt></ruby>のアイデアを初めて出したのはプトレマイオスではありません。
                         アポロニウスやヒッパルコスであると言われていますが、詳しいことは分かっていません。"
                         >
                         注3
                     </span>
                 </sup><br>
-                惑星は周転円の上を回り、その周転円の中心は地球のすぐそばを中心とする従円の上を回っているとしたのです。
+                <ruby>惑星<rt>わくせい</rt></ruby>は<ruby>周転円<rt>しゅうてんえん</rt></ruby>の上を回り、その<ruby>周転円<rt>しゅうてんえん</rt></ruby>の中心は地球のすぐそばを中心とする<ruby>従円<rt>じゅうえん</rt></ruby>の上を回っているとしたのです。
                 <sup>
                     <span class="nowrap note-trigger" data-note=
-                        "プトレマイオスは、今でいう「惑星が円ではなく楕円（ゆがんだ円）の上を動いていること」を表すために、従円の中心を地球から少しだけずらしました。"
+                        "プトレマイオスは、今でいう「<ruby>惑星<rt>わくせい</rt></ruby>が円ではなく<ruby>楕円<rt>だえん</rt></ruby>（ゆがんだ円）の上を動いていること」を表すために、<ruby>従円<rt>じゅうえん</rt></ruby>の中心を地球から少しだけずらしました。"
                         >
                         注4
                     </span>
                 </sup><br>
-                この仕組みはとてもよくできていて、惑星が空のどこに現れるかをおおよそ言い当てることができました。
+                この仕組みはとてもよくできていて、<ruby>惑星<rt>わくせい</rt></ruby>が空のどこに現れるかをおおよそ言い当てることができました。
             </p>
             <figure>
-                <img src="/images/gallery/member_yasutajan/geocentrism.png" alt="天動説">
+                <img src="\images\gallery\member_yasutajan\geocentrism.png" alt="天動説">
                 <figcaption>
-                    図2: プトレマイオスの考えた惑星の動きの説明
+                    図2: プトレマイオスの考えた<ruby>惑星<rt>わくせい</rt></ruby>の動きの説明
                     <span class="nowrap note-trigger" data-note=
-                        "この図では、分かりやすくするために、プトレマイオスの説明とは違うのですが従円の中心は地球にしています。
-                        また、プトレマイオスの説では、従円に対して周転円を少し傾けていました。
-                        難しい話になりますが、これは現在の言葉でいうと、地球と惑星の公転面の傾きの違いを考慮していたことになります。"
+                        "この図では、分かりやすくするために、プトレマイオスの説明とは違うのですが<ruby>従円<rt>じゅうえん</rt></ruby>の中心は地球にしています。
+                        また、プトレマイオスの説では、<ruby>従円<rt>じゅうえん</rt></ruby>に対して<ruby>周転円<rt>しゅうてんえん</rt></ruby>を少し傾けていました。
+                        難しい話になりますが、これは現在の言葉でいうと、地球と<ruby>惑星<rt>わくせい</rt></ruby>の<ruby>公転面<rt>こうてんめん</rt></ruby>の傾きの違いを考えていたことになります。"
                         >
                         (注5)
                     </span><br>
-                    惑星は周転円の上を回り、その周転円の中心は地球のすぐそばを中心とする従円の上を回る
+                    <ruby>惑星<rt>わくせい</rt></ruby>は<ruby>周転円<rt>しゅうてんえん</rt></ruby>の上を回り、その<ruby>周転円<rt>しゅうてんえん</rt></ruby>の中心は地球のすぐそばを中心とする<ruby>従円<rt>じゅうえん</rt></ruby>の上を回る
                 </figcaption>
             </figure>
             <p class="lead">
-                実は、このプトレマイオスの考えを少し直すと、地球は太陽のまわりを回るという<b>地動説</b>とほとんど同じになります。
+                実は、このプトレマイオスの考えを少し直すと、地球は太陽のまわりを回るという<b><ruby>地動説<rt>ちどうせつ</rt></ruby></b>とほとんど同じになります。
                 <sup>
                     <span class="nowrap note-trigger" data-note=
-                        "ただしプトレマイオスの説では、地球や他の惑星が楕円（ゆがんだ円）の上を動いていることまでは表現できていませんでした。
-                        またプトレマイオスは、地球と他の惑星までの実際の距離については正しい知識を持っていませんでした。"
+                        "ただしプトレマイオスの説では、地球や他の<ruby>惑星<rt>わくせい</rt></ruby>が<ruby>楕円<rt>だえん</rt></ruby>（ゆがんだ円）の上を動いていることまでは表現できていませんでした。
+                        またプトレマイオスは、地球と他の<ruby>惑星<rt>わくせい</rt></ruby>までの実際の距離については正しい知識を持っていませんでした。"
                         >
                         注6
                     </span>
                 </sup><br>
-                例えば金星については、周転円の中心を太陽におき、太陽を止めて地球や金星を動かすと、地動説そのものになるのです。
+                例えば金星については、<ruby>周転円<rt>しゅうてんえん</rt></ruby>の中心を太陽におき、太陽を止めて地球や金星を動かすと、<ruby>地動説<rt>ちどうせつ</rt></ruby>そのものになるのです。
                 <sup>
                     <span class="nowrap note-trigger" data-note=
-                        "金星のような、太陽と地球の間にある惑星に関しては、周転円の中心は太陽にあたります。
-                        しかし、火星のような地球より外側にある惑星に関してはそうではありません。
+                        "金星のような、太陽と地球の間にある<ruby>惑星<rt>わくせい</rt></ruby>に関しては、<ruby>周転円<rt>しゅうてんえん</rt></ruby>の中心は太陽にあたります。
+                        しかし、火星のような地球より外側にある<ruby>惑星<rt>わくせい</rt></ruby>に関してはそうではありません。
                         難しい話になりますが、円運動の合成の順番が逆になっているからです。"
                         >
                         注7
@@ -161,11 +162,12 @@
                 プトレマイオスの測定の精密さ
             </h1>
             <p class="lead">
-                プトレマイオスは、惑星や周転円の中心が動く周期や、従円と周転円の大きさの比率をとても正確に計算していました。<br>
+                プトレマイオスは、<ruby>惑星<rt>わくせい</rt></ruby>や<ruby>周転円<rt>しゅうてんえん</rt></ruby>の中心が動く周期や、<ruby>従円<rt>じゅうえん</rt></ruby>と<ruby>周転円<rt>しゅうてんえん</rt></ruby>の大きさの比率をとても正確に計算していました。<br>
+                「周期」とは、ここでは回っているものが元の位置に戻ってくるまでの時間のことを言います。<br>
                 例えば、金星と地球が最も近づく時間の間隔は583.934日としていましたが、
                 <sup>
                     <span class="nowrap note-trigger" data-note=
-                        "プトレマイオスは「409エジプト年と167日間に金星は255回地球に最も近づいて、さらに周転円上を338°25'だけ進んだ」と記しています。[3]p.437"
+                        "プトレマイオスは「409エジプト年と167日間に金星は255回地球に最も近づいて、さらに<ruby>周転円<rt>しゅうてんえん</rt></ruby>上を338°25'だけ進んだ」と記しています。[3]p.437"
                         >
                         注8
                     </span>
@@ -173,7 +175,7 @@
                 これは現在知られている値583.918日にとても近いものでした。
                 <sup>
                     <span class="nowrap note-trigger" data-note=
-                        "地球や他の惑星が太陽のまわりを一周する時間は、現代とプトレマイオスの時代で異なりますが、その差は0.001日程度のため、無視できます。"
+                        "地球や他の<ruby>惑星<rt>わくせい</rt></ruby>が太陽のまわりを一周する時間は、現代とプトレマイオスの時代で異なりますが、その差は0.001日程度のため、無視できます。"
                         >
                         注9
                     </span>
@@ -183,10 +185,10 @@
                 <table cellspacing="0" cellpadding="6">
                     <thead>
                         <tr>
-                            <th><span class="nowrap">地動説に基づく数値</span></th>
+                            <th><span class="nowrap"><ruby>地動説<rt>ちどうせつ</rt></ruby>に基づく数値</span></th>
                             <th><span class="nowrap">現在</span><span class="nowrap">知られている値</span></th>
                             <th><span class="nowrap">プトレマイオスが</span><span class="nowrap">求めた値</span></th>
-                            <th><span class="nowrap">天動説に基づく数値</span></th>
+                            <th><span class="nowrap"><ruby>天動説<rt>てんどうせつ</rt></ruby>に基づく数値</span></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -197,7 +199,7 @@
                                     ÷ 太陽・地球の距離
                                     <sup>
                                         <span class="nowrap note-trigger" data-note=
-                                            "難しい話になりますが、太陽から地球や他の惑星の距離は平均距離、つまり軌道長半径で計算しました。"
+                                            "難しい話になりますが、太陽から地球や他の<ruby>惑星<rt>わくせい</rt></ruby>の距離は平均距離、つまり<ruby>軌道長半径<rt>きどうちょうはんけい</rt></ruby>で計算しました。"
                                             >
                                             注10
                                         </span>
@@ -207,7 +209,7 @@
                             <td>0.723</td>
                             <td>0.719</td>
                             <td>
-                                <span class="nowrap">金星の周転円の半径</span><br><span class="nowrap">÷ 金星の従円の半径</span>
+                                <span class="nowrap">金星の<ruby>周転円<rt>しゅうてんえん</rt></ruby>の半径</span><br><span class="nowrap">÷ 金星の<ruby>従円<rt>じゅうえん</rt></ruby>の半径</span>
                             </td>
                         </tr>
                         <tr>
@@ -220,7 +222,7 @@
                             <td><span class="nowrap">太陽・火星の距離</span><br><span class="nowrap">÷ 太陽・地球の距離</span></td>
                             <td>1.524</td>
                             <td>1.519</td>
-                            <td><span class="nowrap">火星の従円の半径</span><br><span class="nowrap">÷ 火星の周転円の半径</span></td>
+                            <td><span class="nowrap">火星の<ruby>従円<rt>じゅうえん</rt></ruby>の半径</span><br><span class="nowrap">÷ 火星の<ruby>周転円<rt>しゅうてんえん</rt></ruby>の半径</span></td>
                         </tr>
                         <tr>
                             <td><span class="nowrap">地球と火星が</span><span class="nowrap">最も近づく時間の間隔(日)</span></td>
@@ -232,7 +234,7 @@
                                     最も近づく時間の間隔(日)
                                     <sup>
                                         <span class="nowrap note-trigger" data-note=
-                                            "プトレマイオスは「410エジプト年と約231日と2/3日間に火星は192回地球に最も近づいて、さらに周転円上を61°43'だけ進んだ」と記しています。[3]p.458"
+                                            "プトレマイオスは「410エジプト年と約231日と2/3日間に火星は192回地球に最も近づいて、さらに<ruby>周転円<rt>しゅうてんえん</rt></ruby>上を61°43'だけ進んだ」と記しています。[3]p.458"
                                             >
                                             注11
                                         </span>
@@ -250,37 +252,37 @@
             <div class="container inner">
                 <h1 class="heading">この作品について</h1>
                 <figure>
-                    <img src="/images/gallery/member_yasutajan/work.png" alt="作品の写真">
+                    <img src="\images\gallery\member_yasutajan\work.png" alt="作品の写真">
                     <figcaption>
-                        図3: 天動説による惑星の運動モデル
+                        図3: <ruby>天動説<rt>てんどうせつ</rt></ruby>による<ruby>惑星<rt>わくせい</rt></ruby>の運動モデル
                     </figcaption>
                 </figure>
                 <p class="lead">
-                    この作品「天動説による惑星の運動モデル」は、プトレマイオスの考えた宇宙の様子を表したものです。<br>
+                    この作品「<ruby>天動説<rt>てんどうせつ</rt></ruby>による<ruby>惑星<rt>わくせい</rt></ruby>の運動モデル」は、プトレマイオスの考えた宇宙の様子を表したものです。<br>
                     土台の中心には地球が固定されています。<br>
-                    モーターを動かすと、惑星がついた部品が地球のまわりを回ると同時に、惑星がその部品のまわりを回ります。<br>
+                    モーターを動かすと、<ruby>惑星<rt>わくせい</rt></ruby>がついた部品が地球のまわりを回ると同時に、<ruby>惑星<rt>わくせい</rt></ruby>がその部品のまわりを回ります。<br>
                     ただし、金星と火星を同時に動かすことは難しかったので、それぞれ別の部品を用意し、入れかえられるようにしました。
                 </p>
                 <figure>
-                    <img src="/images/gallery/member_yasutajan/work_description.png" alt="作品の説明">
+                    <img src="\images\gallery\member_yasutajan\work_description.png" alt="作品の説明">
                     <figcaption>
                         図4: 作品が動く様子<br>
-                        惑星がついた部品が地球のまわりを回ると同時に、惑星がその部品のまわりを回る
+                        <ruby>惑星<rt>わくせい</rt></ruby>がついた部品が地球のまわりを回ると同時に、<ruby>惑星<rt>わくせい</rt></ruby>がその部品のまわりを回る
                     </figcaption>
                 </figure>
                 <figure>
-                    <img src="/images/gallery/member_yasutajan/venus_and_mars.png" alt="金星と火星の模型">
+                    <img src="\images\gallery\member_yasutajan\venus_and_mars.png" alt="金星と火星の模型">
                     <figcaption>
                         図5: 金星と火星の模型<br>
                         左側が金星の模型で、右側が火星の模型。どちらも地球のついた土台に取り付けられる
                     </figcaption>
                 </figure>
                 <p class="lead">
-                    周転円の半径は、微調整ができるようになっています。<br>
-                    その部分を調整して、従円と周転円の半径の比をプトレマイオスの求めた値とほぼ同じにしています。
+                    <ruby>周転円<rt>しゅうてんえん</rt></ruby>の半径は、微調整ができるようになっています。<br>
+                    その部分を調整して、<ruby>従円<rt>じゅうえん</rt></ruby>と<ruby>周転円<rt>しゅうてんえん</rt></ruby>の半径の比をプトレマイオスの求めた値とほぼ同じにしています。
                 </p>
                 <p class="lead">
-                    また、惑星や周転円の中心が動く周期は、歯車を複雑に組み合わせて、プトレマイオスが求めた値にできるだけ近づけました。<br>
+                    また、<ruby>惑星<rt>わくせい</rt></ruby>や<ruby>周転円<rt>しゅうてんえん</rt></ruby>の中心が動く周期は、歯車を複雑に組み合わせて、プトレマイオスが求めた値にできるだけ近づけました。<br>
                     <div class="scrollable">
                         <table>
                             <thead>
@@ -290,8 +292,8 @@
                                         <span class="nowrap">この作品で</span><span class="nowrap">表現した値</span>
                                         <sup>
                                             <span class="nowrap note-trigger" data-note=
-                                                "ここに記載したのは、理論的な回転数の比による値です。歯車と歯車の間には、小さなすき間があります。
-                                                このため、理論的な回転数の比と実際の回転数の比には違いがあります。"
+                                                "ここに書いたのは、理論的な回転数の比による値です。
+                                                歯車と歯車の間には、小さなすき間があります。このため、理論的な回転数の比と実際の回転数の比には違いがあります。"
                                                 >
                                                 注12
                                             </span>
@@ -316,7 +318,7 @@
                                         <span class="nowrap">地球と金星が最も近づく</span><span class="nowrap">時間の間隔&nbsp;(年)</span>
                                         <sup>
                                             <span class="nowrap note-trigger" data-note=
-                                                "正確には、地球と金星が最も近づく時間の間隔を、周転円の中心が従円を一周する時間で割った値です。"
+                                                "正確には、地球と金星が最も近づく時間の間隔を、<ruby>周転円<rt>しゅうてんえん</rt></ruby>の中心が<ruby>従円<rt>じゅうえん</rt></ruby>を一周する時間で割った値です。"
                                                 >
                                                 注14
                                             </span>
@@ -334,7 +336,7 @@
                                         <span class="nowrap">地球と火星が最も近づく</span><span class="nowrap"></span>時間の間隔&nbsp;(年)</span>
                                         <sup>
                                             <span class="nowrap note-trigger" data-note=
-                                                "正確には、地球と火星が最も近づく時間の間隔を、火星が周転円を一周する時間で割った値です。"
+                                                "正確には、地球と火星が最も近づく時間の間隔を、火星が<ruby>周転円<rt>しゅうてんえん</rt></ruby>を一周する時間で割った値です。"
                                                 >
                                                 注15
                                             </span>
@@ -350,10 +352,130 @@
                         </table>
                     </div>
                 </p>
-                <p class="lead">
-                    この「天動説による惑星の運動モデル」は、まちかね祭などの学園祭で展示する予定です。<br>
-                    まちかね祭へお越しの際は、ご覧いただけると幸いです。
-                </p>
+        </section>
+
+
+        <section class="section">
+        <div class="container inner">
+            <h1 class="heading">
+                歯車の仕組み
+            </h1>
+            <p class="lead">
+                この作品では、<ruby>惑星<rt>わくせい</rt></ruby>が正しい周期で動くように、歯車を複雑に組み合わせて<ruby>惑星<rt>わくせい</rt></ruby>を動かしています。<br>
+                歯車が1歯(ギザギザ一つ分)だけ進むと、それとかみ合っている歯車は、逆向きに1歯進みます。<br>
+                したがって、歯数mの歯車Aが1回転すると、歯車Aはm歯進むため、それとかみ合っている歯数nの歯車Bは逆向きにm歯進みます。つまり、歯車Bは逆向きにm/n回転するのです。<br>
+                これが、<ruby>惑星<rt>わくせい</rt></ruby>を正しい周期で動かすための基本的な仕組みです。
+            </p>
+            <figure>
+                <img src="\images\gallery\member_yasutajan\gears.png" alt="歯車がかみ合っている様子">
+                <figcaption>
+                        <span class="reference">
+                        <a href="https://commons.wikimedia.org/wiki/File:Spur-gears-10-20.svg" target="_blank">
+                            Wikimedia Commons
+                        </a>
+                    </span><br>
+                    図6: 歯車の組み合わせ<br>
+                    歯車Aが1回転すると、歯車Bは逆向きにm/n回転する
+                </figcaption>
+            </figure>
+
+            <p class="lead">
+                しかし、このような単純な仕組みだけで<ruby>惑星<rt>わくせい</rt></ruby>の動きを表現するには、複雑な歯数の歯車が必要になってしまいます。<br>
+                限られた種類の歯車で<ruby>惑星<rt>わくせい</rt></ruby>の動きを表現するために、ディファレンシャルギアと呼ばれる歯車を使いました。<br>
+                ディファレンシャルギアには、a, b, cという3つの回転軸があります。
+                そして、これらの回転軸は、その回転数がc=(a+b)/2をみたすように回転します。<br>
+                この作品では、普通の歯車とディファレンシャルギアを組み合わせて、<ruby>惑星<rt>わくせい</rt></ruby>が正しい周期で動くようにしています。
+            </p>
+            <figure>
+                <img src="\images\gallery\member_yasutajan\differential_free.png" alt="ディファレンシャルギアの仕組み">
+                <figcaption>
+                    <span class="reference">
+                        <a href="https://commons.wikimedia.org/wiki/File:Differential_free.png" target="_blank">
+                            Wikimedia Commons
+                        </a>
+                    </span><br>
+                    図7: ディファレンシャルギアの仕組み<br>
+                    3つの回転軸a, b, cは、c=(a+b)/2をみたすように回転する
+                </figcaption>
+            </figure>
+        </div>
+        </section>
+
+
+        <section class="section">
+        <div class="container inner">
+            <h1 class="heading">
+                <ruby>惑星<rt>わくせい</rt></ruby>が正しい周期で動く仕組み
+            </h1>
+            <p class="lead">
+                普通の歯車やディファレンシャルギアがかみ合っている様子を、簡単のために、図8のように記号で表現することにします。
+                <sup>
+                    <span class="nowrap note-trigger" data-note=
+                        "この記号は私が個人的に考えて使っているもので、一般的に使われているわけではありません。"
+                        >
+                        注16
+                    </span>
+                </sup><br>
+                普通の歯車は8枚歯の歯車と16枚歯の歯車がかみ合っている例を、ディファレンシャルギアは軸cが16枚歯の歯車になっている例をとりあげています。
+            </p>
+            <figure>
+                <img src="\images\gallery\member_yasutajan\gear_example.png" alt="歯車のかみ合わせを表す記号">
+                <figcaption>
+                    図8: 歯車のかみ合わせを表す記号<br>
+                    8枚歯と16枚歯の普通の歯車がかみ合っているという記号(左)と、軸cが16枚歯のディファレンシャルギアの記号(右)
+                </figcaption>
+            </figure>
+            <p class="lead">
+                さて、金星が正しい周期で動くためには、<ruby>周転円<rt>しゅうてんえん</rt></ruby>の中心が<ruby>従円<rt>じゅうえん</rt></ruby>を1周する間に、金星を<ruby>周転円<rt>しゅうてんえん</rt></ruby>の周りに8/13回転させる必要があります。
+                <sup>
+                    <span class="nowrap note-trigger" data-note=
+                        "正確には、金星が太陽を一周する時間を地球が太陽を一周する時間で割った値にする必要があります。
+                        現在知られている値は0.6151943, 『アルマゲスト』に基づく値は0.6151978, 8/13は0.61538...です。"
+                        >
+                        注17
+                    </span>
+                </sup><br>
+                本作品では、この回転数の比を図9のようにして実現しました。<br>
+                なお、軸のそばにある赤い数字は、入力軸に対するその軸の回転数の比を表しています。逆向きの回転はマイナスをつけて表しています。
+                <sup>
+                    <span class="nowrap note-trigger" data-note=
+                        "回転数の比は計算結果のみ示しています。実際に計算する際は、例えばディファレンシャルギアのc軸の回転数をxとおいて方程式を立て、解くとよいでしょう。"
+                        >
+                        注18
+                    </span>
+                </sup><br>
+            </p>
+            <figure>
+                <img src="\images\gallery\member_yasutajan\venus_gears.png" alt="金星の歯車の組み合わせ">
+                <figcaption>
+                    図9: 金星の歯車の組み合わせ<br>
+                    <ruby>周転円<rt>しゅうてんえん</rt></ruby>の中心が<ruby>従円<rt>じゅうえん</rt></ruby>を1周する間に、金星を<ruby>周転円<rt>しゅうてんえん</rt></ruby>の周りに8/13回転させる仕組み
+                </figcaption>
+            </figure>
+            <p class="lead">
+                また、火星が正しい周期で動くためには、<ruby>周転円<rt>しゅうてんえん</rt></ruby>の中心が<ruby>従円<rt>じゅうえん</rt></ruby>を1周する間に、火星を<ruby>周転円<rt>しゅうてんえん</rt></ruby>の周りに42/79回転させる必要があります。
+                <sup>
+                    <span class="nowrap note-trigger" data-note=
+                        "正確には、地球が太陽を一周する時間を火星が太陽を一周する時間で割った値にする必要があります。（金星のときとは逆です）
+                        現在知られている値は1.88087, 『アルマゲスト』に基づく値は1.88077, 42/79は1.88095...です。"
+                        >
+                        注19
+                    </span>
+                </sup><br>
+                本作品では、この回転数の比を図10のようにして実現しました。
+            </p>
+            <figure>
+                <img src="\images\gallery\member_yasutajan\mars_gears.png" alt="火星の歯車の組み合わせ">
+                <figcaption>
+                    図10: 火星の歯車の組み合わせ<br>
+                    <ruby>周転円<rt>しゅうてんえん</rt></ruby>の中心が<ruby>従円<rt>じゅうえん</rt></ruby>を1周する間に、火星を<ruby>周転円<rt>しゅうてんえん</rt></ruby>の周りに42/79回転させる仕組み
+                </figcaption>
+            </figure>
+            <p class="lead">
+                この「<ruby>天動説<rt>てんどうせつ</rt></ruby>による<ruby>惑星<rt>わくせい</rt></ruby>の運動モデル」は、まちかね祭などの学園祭で展示する予定です。<br>
+                まちかね祭へお越しの際は、ご覧いただけると幸いです。
+            </p>
+        </div>
         </section>
 
         <section class="section">
@@ -374,8 +496,7 @@
                 [7] Arnold H.Rots, Peter S.Bunclark “Representations of time coordinates in FITS”<br>
                 Astronomy and Astrophysics, vol574, A36 (2015)<br>
             </p>
-            <p class="lead">
-                <b>更新履歴</b><br>
+            <p class="lead"><b>更新履歴</b><br>
                 
 
 <!--
@@ -390,7 +511,19 @@
 
 -->
 
-                2025年10月4日&nbsp;公開
+                2025年10月29日&nbsp;<span class="text">「歯車の仕組み」以降の章を加筆。また、webページのデザインを刷新しました。</span><br>
+                2025年10月4日&nbsp;公開</p>
+            <p class="lead">
+                <b>関連リンク</b><br>
+                <a href="https://handailegobu.github.io/gallery/member_yasutajan/">
+                    ヤスタジャンの作品棚に戻る
+                </a><br>
+                <a href="https://handailegobu.github.io/gallery/">
+                    作品集に戻る
+                </a><br>
+                <a href="https://handailegobu.github.io/">
+                    大阪大学レゴ部のホームページに戻る
+                </a>
             </p>
         </div>
         </section>
