@@ -20,6 +20,72 @@
 		<link rel="stylesheet" href="/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="sass/ie8.scss" /><![endif]-->
 		<script src="https://kit.fontawesome.com/652f16b4e9.js" crossorigin="anonymous"></script>
+		<style>
+			.box.post > section > header h2 {
+				line-height: 1.45;
+				margin-bottom: 1.1em;
+			}
+			.workshop-image-pair {
+				display: flex;
+				gap: 1.5em;
+				margin: 0 0 2em 0;
+			}
+
+			.workshop-image {
+				margin: 0 0 2em 0;
+			}
+
+			.workshop-image-pair figure,
+			.workshop-image figure {
+				flex: 1;
+				margin: 0;
+			}
+
+			.workshop-photo {
+				display: block;
+				height: auto;
+				margin: 0 auto;
+			}
+
+			.photo-1 { width: 70%; }
+			.photo-2 { width: 70%; }
+			.photo-3 { width: 40%; }
+			.photo-4 { width: 70%; }
+			.photo-5 { width: 70%; }
+			.photo-6 { width: 44%; }
+
+			.workshop-image-pair figcaption,
+			.workshop-image figcaption {
+				margin-top: 0.6em;
+				line-height: 1.6;
+				font-size: 0.95em;
+				color: #444;
+			}
+
+			.workshop-image-pair .caption-title,
+			.workshop-image .caption-title {
+				display: block;
+				font-weight: 700;
+				text-align: center;
+				color: #252122;
+			}
+
+			@media screen and (max-width: 736px) {
+				.workshop-image-pair {
+					flex-direction: column;
+					gap: 1em;
+				}
+
+				.photo-1,
+				.photo-2,
+				.photo-3,
+				.photo-4,
+				.photo-5,
+				.photo-6 {
+					width: 92%;
+				}
+			}
+		</style>
 
 		<!--common HTML parts-->
 		<script src="/javascript/jquery.min.js"></script>
@@ -57,7 +123,7 @@
                             <article class="box post">
                                 <section>
                                 <header>
-                                    <h2>日本科学未来館「未来のモビリティをつくっちゃおう！ アイデアを形にするワークショップ」</h2>
+                                    <h2>日本科学未来館「未来のモビリティをつくっちゃおう！アイデアを形にするワークショップ」</h2>
                                 </header>
                                 <p>
 
@@ -82,9 +148,23 @@
                                     また、会場には夢の実現の象徴として「トヨタミライドン」も展示されており参加した子供たちは目を輝かせていました。
 
                                 </p>
-                                <!-- 画像 二枚左右に分ける。豊田未來どんは出典明記すること-->
-                                <img src="/images/article/26_kagakumiraikan/1.jpg" alt="ワークショップの様子1">
-                                <img src="/images/article/26_kagakumiraikan/2.jpg" alt="ワークショップの様子2">
+                                <!-- 画像 二枚左右に分ける。右側の画像はは出典明記すること-->
+								<div class="workshop-image-pair">
+									<figure>
+										<img class="workshop-photo photo-1" src="/images/article/26_kagakumiraikan/1.jpg" alt="ものづくりすごろく">
+										<figcaption>
+											<span class="caption-title">ものづくりすごろく</span>
+											
+										</figcaption>
+									</figure>
+									<figure>
+										<img class="workshop-photo photo-2" src="/images/article/26_kagakumiraikan/2.jpg" alt="トヨタミライドン">
+										<figcaption>
+											<span class="caption-title">トヨタミライドン</span>
+											©Pokémon. ©Nintendo/Creatures Inc. /GAME FREAK inc.
+										</figcaption>
+									</figure>
+								</div>
 
 								<P>
 
@@ -94,16 +174,35 @@
                                     まずは私から用意したパーツの簡単な紹介をしました。子どもたちになるべく不自由なく作品を作ってもらえるようにかなり多くのパーツを準備しました。
 
                                 </P>
-                                <!-- 画像 パーツの写真 -->
-                                
-                                <img src="/images/article/26_kagakumiraikan/3.jpg" alt="パーツの写真">
+								<!-- 画像 パーツの写真 -->
+								<figure class="workshop-image">
+									<img class="workshop-photo photo-3" src="/images/article/26_kagakumiraikan/3.jpg" alt="準備したパーツの写真">
+									<figcaption>
+										<span class="caption-title">準備したパーツ</span>
+										
+									</figcaption>
+								</figure>
 
 								<P>
                                     パーツの紹介が終わった後は部員と協力しての作品制作が始まりました。部員は事前にアイデアを共有していただいて、ある程度組み方を考えてきていましたが、子供たちの自由な発想の前にはあまり役に立ちませんでした。それでも、各々が持つレゴの知識、技術と用意したパーツを駆使してなるべく子供たちの要望通りの作品が出来上がるように全力でサポートしました。制作中は子どもたちのアイデアに驚かされるばかりで改めて子どもの発想力の豊かさに感心しました。作品の制作時間は約９０分ありましたが、あっという間に終わってしまいました。
                                 </P>
-                                <!-- 画像 完成した作品の写真二枚。-->
-                                <img src="/images/article/26_kagakumiraikan/4.jpg" alt="完成した作品の写真1">
-                                <img src="/images/article/26_kagakumiraikan/5.jpg" alt="完成した作品の写真2">
+                                <!-- 画像 制作中の様子-->
+								<div class="workshop-image-pair">
+									<figure>
+										<img class="workshop-photo photo-4" src="/images/article/26_kagakumiraikan/4.jpg" alt="制作中の様子の写真1">
+										<figcaption>
+											<span class="caption-title">制作中の様子</span>
+										
+										</figcaption>
+									</figure>
+									<figure>
+										<img class="workshop-photo photo-5" src="/images/article/26_kagakumiraikan/5.jpg" alt="制作中の様子の写真2">
+										<figcaption>
+											<span class="caption-title">制作中の様子</span>
+										
+										</figcaption>
+									</figure>
+								</div>
 
                                 <p>
 
@@ -114,8 +213,14 @@
 そして、ワークショップの最後には子供たちが作った作品を自ら展示会場の「トヨタミライドン」の前に並べました。子供たちは達成感にあふれた様子で笑顔で保護者の方と写真撮影をしていました。
 
                                 </p>
-                                <!-- 画像 展示の様子-->
-                                <img src="/images/article/26_kagakumiraikan/6.jpg" alt="展示の様子">
+								<!-- 画像 展示の様子-->
+								<figure class="workshop-image">
+									<img class="workshop-photo photo-6" src="/images/article/26_kagakumiraikan/6.jpg" alt="完成し、並べられた作品たちの写真">
+									<figcaption>
+										<span class="caption-title">完成し、並べられた作品たち</span>
+										
+									</figcaption>
+								</figure>
                                 
                                 <p>
                                     最後になりましたが、ワークショップに参加いただいた皆様、そしてこのような貴重な機会をくださった日本科学未来館の皆様に感謝申し上げます。ありがとうございました。<br>
