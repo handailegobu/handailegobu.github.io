@@ -1,0 +1,106 @@
+---
+// 作品集トップ（ハブ）。現行 gallery/index.html を忠実に再現。
+// 内部リンクは移行後のクリーンURL（拡張子なし）に統一。
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const members = [
+  { href: '/gallery/member_negi/', icon: '/images/gallery/thumbnail/negi_icon.png', name: 'ねぎ', bio: 'かっこいいものが好きです<br>モンスターハンターがメイン' },
+  { href: '/gallery/member_kuruponkyu/', icon: '/images/gallery/thumbnail/kuruponkyu_icon.png', name: 'くるぽんきゅー', bio: 'かわいいものが好きです💖<br>食べ物を実寸大で作ることに<br>はまっています🍽️😋' },
+  { href: '/gallery/member_bansho/', icon: '/images/gallery/thumbnail/bansho_icon.png', name: '番匠', bio: 'いろいろ作る<br>特に和風建築が好き' },
+  { href: '/gallery/member_yasutajan/', icon: '/images/gallery/thumbnail/yasutajan_icon.png', name: 'ヤスタジャン', bio: 'テクニックの作品を作る<br>新しく作品を作ろうと思い立っても<br>難しくて諦めることが多い' },
+  { href: '/gallery/member_reirou/', icon: '/images/gallery/thumbnail/reirou_icon.png', name: 'レーロー', bio: '歴史的建造物メイン<br>最近はテクニックパーツだけでなく、<br>通常のレゴブロックも使い始めた' },
+  { href: '/gallery/member_anthony/', icon: '/images/gallery/thumbnail/anthony_icon.png', name: 'anthony', bio: 'ドット絵制作がメイン<br>最近立体の作品がうまく作れないことに<br>コンプレックスを抱き始め練習中' },
+  { href: '/gallery/member_zeke/', icon: '/images/gallery/thumbnail/zeke_icon(new).png', name: 'ZEKE', bio: 'いろいろやります<br>最近はミリタリー系多め' },
+  { href: '/gallery/member_cudafox/', icon: '/images/gallery/thumbnail/cudafox_icon.png', name: 'CUDA狐', bio: 'キャラクターやガジェットを作る<br>依頼制作もいろいろ<br>' },
+  { href: '/gallery/member_mocchi/', icon: '/images/gallery/thumbnail/mocch_icon.jpg', name: 'もっちー', bio: 'ポケモンがメイン<br>他分野の作品も今後増えるかも' },
+  { href: '/gallery/member_obog/', icon: '/images/gallery/thumbnail/ロゴ_RGB new.png', name: '卒業生の作品棚', bio: '2024年度以降の卒業生作品を一部ご紹介' },
+];
+---
+
+<BaseLayout title="作品集｜大阪大学レゴ部" bodyClass="left-sidebar">
+  <section>
+    <div class="row">
+      <div class="6u 12u(mobile)">
+        <section class="box">
+          <header><h2>いちょう祭・まちかね祭</h2></header>
+          <ul>
+            <li>
+              <a href="/gallery/gakusai_24_machikane/"><img width="200" src="/images/gallery/thumbnail/2024machikane_thumbnail.png" alt="2024まちかね祭" /></a>
+              <a href="/gallery/gakusai_24_ichou/"><img width="200" src="/images/gallery/thumbnail/2024ichou_thumbnail.jpg" alt="2024いちょう祭" /></a>
+              <a href="/gallery/gakusai_23_machikane/"><img width="200" src="/images/gallery/thumbnail/2023machikane_thumbnail.jpg" alt="2023まちかね祭" /></a>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div class="6u 12u(mobile)">
+        <section class="box">
+          <section>
+            <header><h2>部員の作品棚</h2></header>
+            <p>いろんな部員の作品をご紹介！</p>
+            {members.map((m) => (
+              <div class="row">
+                <div class="3.4u 4u(mobile)">
+                  <a href={m.href}><img width="120" src={m.icon} alt={m.name} /></a>
+                </div>
+                <div class="8.6u 8u(mobile)">
+                  <h3>{m.name}</h3>
+                  <p set:html={m.bio} />
+                </div>
+              </div>
+            ))}
+          </section>
+          <p>作品棚は随時更新中！他の部員の作品棚も今後増えるのでお楽しみに！！</p>
+        </section>
+      </div>
+      <div class="12u 12u(mobile)">
+        <section class="box">
+          <header><h2>大型作品</h2></header>
+          <a href="/gallery/work_osakajo/"><img src="/images/gallery/thumbnail/osakajo_icon.png" alt="大阪城" /></a>
+          <a href="/gallery/work_machikanewani/"><img src="/images/gallery/thumbnail/machikanewani_icon.png" alt="マチカネワニ" /></a>
+          <a href="/gallery/work_planet/"><img src="/images/gallery/thumbnail/planet_icon.png" alt="惑星" /></a>
+          <a href="/gallery/work_kadomatsu/"><img src="/images/gallery/thumbnail/kadomatsu_icon.png" alt="門松" /></a>
+        </section>
+      </div>
+      <div class="12u 12u(mobile)">
+        <section class="box">
+          <header><h2>その他</h2></header>
+          <h3>レビュー記事</h3>
+          <p>部員が所有しているセットの紹介をしています。更新は不定期です。</p>
+          <div class="row">
+            <div class="4u 4u(mobile)">
+              <ul><li><a href="/gallery/legocreatorreviews/">クリエイターレビュー第1弾～第4弾</a></li></ul>
+            </div>
+            <div class="4u 4u(mobile)">
+              <ul><li><a href="/gallery/legoideareviews/">NASA アポロ計画 SATURN V</a></li></ul>
+            </div>
+            <div class="4u 4u(mobile)"><ul></ul></div>
+          </div>
+          <h3>一般参加型コンテスト</h3>
+          <p>一般の方を対象としたオリジナル作品コンテストを開催しました。</p>
+          <div class="row">
+            <div class="4u 4u(mobile)">
+              <ul>
+                <li><a href="/gallery/contest/contest2015winter/">2015年冬コンテスト（第1回）</a></li>
+                <li><a href="/gallery/contest/contest2017spring/">2017年春コンテスト（第4回）</a></li>
+                <li><a href="/gallery/contest/contest2019fall/">2019年秋コンテスト（第8回）</a></li>
+              </ul>
+            </div>
+            <div class="4u 4u(mobile)">
+              <ul>
+                <li><a href="/gallery/contest/contest2016spring/">2016年春コンテスト（第2回）</a></li>
+                <li><a href="/gallery/contest/contest2017fall/">2017年秋コンテスト（第5回）</a></li>
+                <li><a href="/gallery/contest/contest2020spring/">2020年春コンテスト（第9回）</a></li>
+              </ul>
+            </div>
+            <div class="4u 4u(mobile)">
+              <ul>
+                <li><a href="/gallery/contest/contest2016fall/">2016年秋コンテスト（第3回）</a></li>
+                <li><a href="/gallery/contest/contest2019spring/">2019年春コンテスト（第7回）</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
