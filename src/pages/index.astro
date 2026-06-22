@@ -1,0 +1,24 @@
+---
+// 【暫定】フェーズ1のビルド検証用プレースホルダ。
+// フェーズ3で旧 index.html の内容（バナー/最新情報/代表作 等）を移植して置き換える。
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="大阪大学レゴ部" bodyClass="homepage">
+  <section class="box" slot="header">
+    <header>
+      <h2>大阪大学レゴ部へようこそ！</h2>
+      <p>Welcome to Osaka University LEGO&reg; User Group</p>
+    </header>
+  </section>
+
+  <div class="row">
+    <div class="12u 12u(mobile)">
+      <section class="box">
+        <header class="major"><h2>フェーズ1 動作確認用ページ</h2></header>
+        <p>このページは Astro 移行の足場（共通レイアウト・ヘッダー・ナビ・フッター）の動作確認用プレースホルダです。フェーズ3でトップページ本体に差し替えます。</p>
+        <p>ヘッダーのナビ、現在地ハイライト、モバイルのハンバーガーメニュー、フッターが表示されることを確認してください。</p>
+      </section>
+    </div>
+  </div>
+</BaseLayout>

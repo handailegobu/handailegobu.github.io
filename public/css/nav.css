@@ -1,0 +1,80 @@
+/* ===========================================================
+   nav.css — dropotron / skel を置き換えるナビ用スタイル
+   main.css の後に読み込み、既存の見た目（.dropotron / #navPanel）を踏襲する。
+   main.css 本体は変更しない。
+   =========================================================== */
+
+/* ---- デスクトップ: ホバーで開くドロップダウン（旧 dropotron 相当） ---- */
+@media screen and (min-width: 737px) {
+  #nav > ul > li {
+    position: relative;
+  }
+
+  /* main.css の `#nav > ul > li > ul { display:none }` を上書きし、
+     .dropotron 風の見た目で隠し持つ（後勝ち＋同特異度で本ファイルが勝つ） */
+  #nav > ul > li > ul {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0.75em 0 0 0;
+    padding: 1.25em 1.5em;
+    min-width: 13em;
+    list-style: none;
+    border-radius: 5px;
+    background-color: rgba(34, 30, 31, 0.98);
+    box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.5);
+    font-style: italic;
+    text-align: left;
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  #nav > ul > li:hover > ul,
+  #nav > ul > li:focus-within > ul {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  #nav > ul > li > ul::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -10px;
+    top: -9px;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+    border-bottom: solid 10px rgba(34, 30, 31, 0.98);
+  }
+
+  #nav > ul > li > ul li {
+    padding: 0.25em 0;
+    list-style: none;
+  }
+
+  #nav > ul > li > ul a {
+    color: #009999;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.25s ease-in-out;
+  }
+
+  #nav > ul > li > ul li:hover > a {
+    color: #fff;
+  }
+}
+
+/* ---- モバイル: ハンバーガーアイコンを FontAwesome 非依存にする ----
+   旧CSSは font-family:FontAwesome の \f0c9 を使うが、現在のFAキット(v5/6)では
+   そのフォント名が無くアイコンが出ない場合があるため、Unicodeの三本線に差し替える。 */
+@media screen and (max-width: 736px) {
+  #titleBar .toggle::before {
+    font-family: inherit;
+    content: '\2630';
+    font-size: 22px;
+  }
+}
