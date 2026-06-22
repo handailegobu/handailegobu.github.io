@@ -1,0 +1,48 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const [works, members] = await Promise.all([
+    getCollection('works', (w) => !w.data.external),
+    getCollection('members'),
+  ]);
+  const nicknameById = Object.fromEntries(members.map((m) => [m.id, m.data.nickname]));
+
+  return works.map((entry) => {
+    const [member, work] = entry.id.split('/');
+    return {
+      params: { member, work },
+      props: { entry, nickname: nicknameById[member] ?? '' },
+    };
+  });
+}
+
+const { entry, nickname } = Astro.props;
+const { title, images, related } = entry.data;
+const { Content } = await render(entry);
+
+const pageTitle = `${title}｜部員の作品棚：${nickname}｜作品集｜大阪大学レゴ部`;
+const ogImage = images[0]?.src ?? entry.data.card.thumb;
+---
+
+<BaseLayout title={pageTitle} bodyClass="left-sidebar" ogImage={ogImage}>
+  <section class="box">
+    <h2>{title}</h2>
+    <br />
+    {images.map((img) => <img width={img.width} src={img.src} alt={title} />)}
+    <p></p>
+    <h3>どういう作品？</h3>
+    <Content />
+  </section>
+
+  {related && (
+    <section class="box">
+      <p>
+        <a href={related.href}>{related.label}</a>
+        <br />
+        <a href={related.href}><img width={related.width} src={related.thumb} alt={related.label} /></a>
+      </p>
+    </section>
+  )}
+</BaseLayout>
