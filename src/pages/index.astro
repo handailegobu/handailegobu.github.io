@@ -1,23 +1,136 @@
 ---
-// 【暫定】フェーズ1のビルド検証用プレースホルダ。
-// フェーズ3で旧 index.html の内容（バナー/最新情報/代表作 等）を移植して置き換える。
+// トップページ。旧 index.html を忠実に再現（内部リンクはクリーンURL化、画像は絶対パス）。
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const news = [
+  { date: '2026/04/15', text: '日本科学未来館ワークショップ記事を追加しました。', link: '/about/workshop_26_kagakumiraikan/', linkText: '「日本科学未来館ワークショップ」ページ' },
+  { date: '2026/03/21', text: '2026年度入部案内を更新しました', link: '/join/', linkText: '「入部について」ページ' },
+  { date: '2025/11/20', text: 'レーローの作品棚を追加しました', link: '/gallery/member_reirou/', linkText: '「レーローの作品棚」ページ' },
+  { date: '2025/11/20', text: 'レゴ部の活動マップを追加しました', link: '/about/', linkText: '「活動内容」ページ' },
+  { date: '2025/11/13', text: '番匠の作品棚を更新しました', link: '/gallery/member_bansho/', linkText: '「番匠の作品棚」ページ' },
+  { date: '2025/10/30', text: 'ヤスタジャンの作品棚を更新しました', link: '/gallery/member_yasutajan/', linkText: '「ヤスタジャンの作品棚」ページ' },
+  { date: '2025/10/27', text: 'まちかね祭2024記事②（合作制作過程編）を公開しました', link: '/gallery/gakusai_24_machikane/gassaku1/', linkText: '「2024まちかね祭・合作制作過程編」ページ' },
+  { date: '2025/10/04', text: 'ヤスタジャンの作品棚を追加しました', link: '/gallery/member_yasutajan/', linkText: '「ヤスタジャンの作品棚」ページ' },
+  { date: '2025/09/18', text: '部員紹介を更新しました', link: '/about/', linkText: '「活動紹介」ページ' },
+  { date: '2025/08/30', text: '日本科学未来館作品記事を追加しました', link: '/about/workrequest_25_kagakumiraikan/', linkText: '「日本科学未来館」ページ' },
+  { date: '2025/04/25', text: 'レーローの作品棚を追加しました（05/15さらに3作品追加）', link: '/gallery/member_reirou/', linkText: '「レーローの作品棚」ページ' },
+  { date: '2025/04/13', text: '番匠の作品棚を追加しました', link: '/gallery/member_bansho/', linkText: '「番匠の作品棚」ページ' },
+  { date: '2025/04/07', text: 'みのおキューズモールワークショップ記事を追加しました', link: '/about/workshop_25_qsmall/', linkText: '「みのおキューズモール（四足歩行ロボット）」ページ' },
+  { date: '2025/03/30', text: 'CUDA狐の作品棚に作品を追加しました', link: '/gallery/member_cudafox/', linkText: '「CUDA狐の作品棚」ページ' },
+];
 ---
 
 <BaseLayout title="大阪大学レゴ部" bodyClass="homepage">
-  <section class="box" slot="header">
-    <header>
-      <h2>大阪大学レゴ部へようこそ！</h2>
-      <p>Welcome to Osaka University LEGO&reg; User Group</p>
-    </header>
-  </section>
+  <Fragment slot="header">
+    <!-- Banner -->
+    <section id="banner">
+      <header>
+        <h2>大阪大学レゴ部へようこそ！</h2>
+        <p>Welcome to Osaka University LEGO&reg; User Group</p>
+      </header>
+    </section>
+
+    <!-- Intro -->
+    <section id="intro" class="container">
+      <div class="row">
+        <div class="4u 12u(mobile)">
+          <section class="first">
+            <a href="/about/"><img src="/images/top/home_icon1.png" height="200" alt="活動目標" /></a>
+            <header><h2>活動目標</h2></header>
+            <p>阪大レゴ部では「子どもたちに対してサイエンスを教える」ということで色々なワークシップやイベントを開催しております</p>
+          </section>
+        </div>
+        <div class="4u 12u(mobile)">
+          <section class="middle">
+            <a href="/gallery/gakusai_24_ichou/"><img src="/images/top/home_icon2.png" height="200" alt="メインイベント" /></a>
+            <header><h2>メインイベント</h2></header>
+            <p>阪大レゴ部は年2回の学祭、いちょう祭、まちかね祭での展示をメインの活動としています。</p>
+          </section>
+        </div>
+        <div class="4u 12u(mobile)">
+          <section class="last">
+            <a href="/join/"><img src="/images/top/home_icon3.png" height="200" alt="随時部員募集中" /></a>
+            <header><h2>随時部員募集中</h2></header>
+            <p>作品を作りたい、ワークショップなどのイベントを運営したい、など熱い思いがある阪大生は是非参加してください！<br></p>
+          </section>
+        </div>
+      </div>
+      <footer>
+        <ul class="actions">
+          <li><a href="/join/" class="button big">入部案内</a></li>
+          <li><a href="/gallery/" class="button alt big">レゴ部の作品を見る</a></li>
+          <li><a href="/contact/" class="button big">お問い合わせ</a></li>
+        </ul>
+        <a href="https://twitter.com/handai05club?s=09" target="_blank"><i class="fab fa-twitter-square fa-3x fa-fw icontwitter"></i></a>
+        <a href="https://www.facebook.com/handai05club/" target="_blank"><i class="fab fa-facebook-square fa-3x fa-fw iconfacebook"></i></a>
+        <a href="https://instagram.com/handai05club?igshid=1rt2ph1a14zqd" target="_blank"><i class="fab fa-instagram-square fa-3x fa-fw iconinstagram"></i></a>
+        <a href="https://www.youtube.com/@oulug5987" target="_blank"><i class="fab fa-youtube-square fa-3x fa-fw iconyoutube"></i></a>
+      </footer>
+    </section>
+  </Fragment>
 
   <div class="row">
+    <!-- 最新情報 -->
     <div class="12u 12u(mobile)">
+      <section>
+        <header class="major"><h2>最新情報</h2></header>
+      </section>
       <section class="box">
-        <header class="major"><h2>フェーズ1 動作確認用ページ</h2></header>
-        <p>このページは Astro 移行の足場（共通レイアウト・ヘッダー・ナビ・フッター）の動作確認用プレースホルダです。フェーズ3でトップページ本体に差し替えます。</p>
-        <p>ヘッダーのナビ、現在地ハイライト、モバイルのハンバーガーメニュー、フッターが表示されることを確認してください。</p>
+        {news.map((n) => (
+          <Fragment>
+            <h3>({n.date}){n.text}</h3>
+            <p><a href={n.link}>{n.linkText}</a>をご覧ください。</p>
+          </Fragment>
+        ))}
+      </section>
+    </div>
+
+    <!-- 代表作 -->
+    <div class="8u 12u(mobile)">
+      <section>
+        <header class="major"><h2>代表作</h2></header>
+        <div class="row">
+          <div class="6u 12u(mobile)">
+            <section class="box">
+              <a class="image featured"><img src="/images/top/Iidashi1.jpg" alt="飯田市ジオラマ" /></a>
+              <header><h3>飯田市　ジオラマ</h3></header>
+              <p>横幅3m奥行1.5mサイズの長野県飯田市のジオラマです。丘の上結いスクエアにてご覧いただけます。(2023~'24制作)</p>
+            </section>
+          </div>
+          <div class="6u 12u(mobile)">
+            <section class="box">
+              <a class="image featured"><img src="/images/top/shabani.jpg" alt="famous gorilla from higashiyama zoo built out of LEGO" /></a>
+              <header><h3>イケメンゴリラシャバーニ</h3></header>
+              <p>名古屋市東山動物園のイケメン人気ゴリラ「シャバーニ」の等身大モデルを半年間かけて製作しました。本作は栄駅地下サカエチカのクリスタル広場にて約9カ月展示された後、現在は東山動物園内にて展示されています。</p>
+              <footer><a href="https://www.nikkei.com/article/DGXLASFD04H06_U7A300C1CN0000/" class="button alt" target="_blank">日経の記事</a></footer>
+            </section>
+          </div>
+          <div class="6u 12u(mobile)">
+            <section class="box">
+              <a class="image featured"><img src="/images/top/kofun.jpg" alt="仁徳陵古墳" /></a>
+              <header><h3>560分の1仁徳陵古墳</h3></header>
+              <p>百舌鳥・古市古墳群の世界文化遺産登録を目指す取り組みの一環としてブロックで、５６０分の１サイズの仁徳陵古墳を製作しました。デジタルデータにて設計し、ほりや墳丘の傾斜までリアルに再現しました。</p>
+              <footer><a href="https://www.archaeology.org/news/5349-170302-japan-lego-tomb" class="button alt" target="_blank">Archaeologyの記事</a></footer>
+            </section>
+          </div>
+          <div class="6u 12u(mobile)">
+            <section class="box">
+              <a class="image featured"><img src="/images/top/hitachi.jpg" alt="日立の街" /></a>
+              <header><h3>日立の街</h3></header>
+              <p>東京と大阪で開催されたマイナビ主催の日立グループ合同説明会で「日立製品が活躍する街」をテーマにモデルを展示しました。同社の製品が街のどこで活躍しているのかを分かりやすく視覚化し、来場者に見ていただきました。</p>
+            </section>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Twitter -->
+    <div class="4u 12u(mobile)">
+      <section>
+        <header class="major"><h2>Twitter</h2></header>
+        <p>※仕様上いいね数の多いツイート順に表示されますがご了承ください。</p>
+        <a class="twitter-timeline" data-lang="ja" data-height="1200" data-theme="light" href="https://twitter.com/handai05club?ref_src=twsrc%5Etfw">Tweets by handai05club</a>
+        <script is:inline async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </section>
     </div>
   </div>
