@@ -78,3 +78,24 @@
     font-size: 22px;
   }
 }
+
+/* ---- 作品ページ用ユーティリティ ---- */
+/* くるぽんきゅー「ラーメン」: 2枚を横並び（モバイルで縦積み）。元ページ固有styleの移植 */
+.ramen-image-pair {
+  display: flex;
+  gap: 1.5em;
+  margin-top: 1em;
+}
+.ramen-image-pair img {
+  width: calc(50% - 0.75em);
+  height: auto;
+  display: block;
+}
+@media screen and (max-width: 736px) {
+  .ramen-image-pair {
+    flex-direction: column;
+  }
+  .ramen-image-pair img {
+    width: 100%;
+  }
+}
