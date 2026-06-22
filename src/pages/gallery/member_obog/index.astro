@@ -1,0 +1,37 @@
+---
+// 卒業生の作品棚（アーカイブ）。卒業生メンバーへのリンク集のため単独ページとして移植。
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const graduates = [
+  { href: '/gallery/member_mame-daifuku/', icon: '/images/gallery/thumbnail/mame-daifuku_icon.png', name: 'まめ大福', note: '25年度卒業生' },
+  { href: '/gallery/member_ishimasa/', icon: '/images/gallery/thumbnail/ishimasa_icon.png', name: 'いしまさ', note: '24年度卒業生' },
+];
+---
+
+<BaseLayout title="卒業生の作品棚｜作品集｜大阪大学レゴ部" bodyClass="left-sidebar">
+  <section class="box">
+    <h2>卒業生の作品棚</h2>
+    <p>
+      このページでは、阪大レゴ部を卒業されたメンバーのうち、本サイトで過去に作品を公開されていた方の作品をアーカイブしています。<br>
+      残念ながらここで紹介されているメンバーはほんの一部で、他にもたくさんの卒業生が素晴らしい作品を作っておられます。<br>
+      また、多くの卒業生が卒業後も作品を作り続けておられます．卒業生の今後の活躍をご期待ください！<br>
+    </p>
+  </section>
+  <div class="12u 12u(mobile)">
+    <section class="box">
+      <section>
+        {graduates.map((g) => (
+          <div class="row">
+            <div class="3.4u 3.4u(mobile)">
+              <a href={g.href}><img width="120" src={g.icon} alt={g.name} /></a>
+            </div>
+            <div class="8.6u 8.6u(mobile)">
+              <h3>{g.name}</h3>
+              <p>{g.note}</p>
+            </div>
+          </div>
+        ))}
+      </section>
+    </section>
+  </div>
+</BaseLayout>
