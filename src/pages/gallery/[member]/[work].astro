@@ -19,7 +19,7 @@ export async function getStaticPaths() {
 }
 
 const { entry, nickname } = Astro.props;
-const { title, images, related } = entry.data;
+const { title, images, related, heading } = entry.data;
 const { Content } = await render(entry);
 
 const pageTitle = `${title}｜部員の作品棚：${nickname}｜作品集｜大阪大学レゴ部`;
@@ -32,7 +32,7 @@ const ogImage = images[0]?.src ?? entry.data.card.thumb;
     <br />
     {images.map((img) => <img width={img.width} src={img.src} alt={title} />)}
     <p></p>
-    <h3>どういう作品？</h3>
+    {heading && <h3>{heading}</h3>}
     <Content />
   </section>
 

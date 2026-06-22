@@ -25,6 +25,8 @@ const works = defineCollection({
     title: z.string(),
     /** 作品棚カードの見出し（未指定なら title を流用） */
     cardTitle: z.string().optional(),
+    /** 本文画像の直後に出す見出し。既定は「どういう作品？」。空文字にすると見出しを出さず本文に委ねる */
+    heading: z.string().default('どういう作品？'),
     /** 作品棚での並び順 */
     order: z.number(),
     /** 作品棚カードのサムネイル */
