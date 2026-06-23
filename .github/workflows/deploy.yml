@@ -1,11 +1,16 @@
-name: Deploy to GitHub Pages
+name: Build & Deploy to GitHub Pages
 
-# master へのpush（＝本番）でAstroをビルドし GitHub Pages へデプロイする。
-# 注意: 実際に切り替わるのは、リポジトリ設定 Settings > Pages の Source を
-#       「GitHub Actions」にした後。それまでは従来どおりブランチ配信のまま。
+# - build  : push / PR / 手動実行で常に走る。Astroビルドの検証を兼ねる。
+#            Ubuntu(本番同等)で走るため、Windowsローカルでは検出できない
+#            大文字拡張子(.JPG 等)の case-sensitive な 404 罠もここで顕在化する。
+# - deploy : master の時だけ走り、実際に GitHub Pages へ公開する。
+#
+# 注意: 本番が Actions 配信に切り替わるのは、リポジトリ設定 Settings > Pages の
+#       Source を「GitHub Actions」にした後。それまでは従来どおりブランチ配信のまま。
 on:
   push:
-    branches: [master]
+    branches: [master, feat/astro-migration]
+  pull_request:
   workflow_dispatch:
 
 permissions:
@@ -33,13 +38,20 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+      - name: Build output summary
+        run: |
+          echo "主要URL(ディレクトリ形式)の出力を確認:"
+          ls -d dist/ dist/about/ dist/gallery/ dist/join/ dist/contact/ 2>/dev/null || true
+          echo "総HTML出力数: $(find dist -name '*.html' | wc -l)"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
 
+  # master の時だけ本番公開する。PR / feat ブランチ push では build までで止まる。
   deploy:
     needs: build
+    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
