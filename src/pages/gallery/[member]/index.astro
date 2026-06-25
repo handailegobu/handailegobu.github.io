@@ -1,0 +1,65 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  // managed=false（自由制作領域 / passthrough）は動的生成しない
+  const members = await getCollection('members', (m) => m.data.managed);
+  const works = await getCollection('works');
+
+  return members.map((member) => {
+    const memberWorks = works
+      .filter((w) => w.id.split('/')[0] === member.id)
+      .sort((a, b) => a.data.order - b.data.order);
+    return { params: { member: member.id }, props: { member, works: memberWorks } };
+  });
+}
+
+const { member, works } = Astro.props;
+const { nickname, icon, iconWidth, bio } = member.data;
+
+const pageTitle = `部員の作品棚：${nickname}｜作品集｜大阪大学レゴ部`;
+
+// 作品カードのリンク先（外部指定があればそちらへ、なければ生成ページへ）
+function linkFor(entry: (typeof works)[number]): string {
+  if (entry.data.external) return entry.data.external;
+  const slug = entry.id.split('/')[1];
+  return `/gallery/${member.id}/${slug}/`;
+}
+
+// 3枚ずつの行に分割（旧レイアウト踏襲）
+const rows: (typeof works)[] = [];
+for (let i = 0; i < works.length; i += 3) rows.push(works.slice(i, i + 3));
+---
+
+<BaseLayout title={pageTitle} bodyClass="left-sidebar" ogImage={icon}>
+  <section class="box">
+    <h2>{nickname}の作品棚</h2>
+    <p></p>
+    <div class="row">
+      <div class="2u 2u(mobile)">
+        <img width={iconWidth} src={icon} alt={`${nickname}のアイコン`} />
+      </div>
+      <div class="10u 10u(mobile)">
+        <h3>自己紹介</h3>
+        <p set:html={bio} />
+      </div>
+    </div>
+  </section>
+
+  {rows.map((row) => (
+    <div class="row">
+      {row.map((entry) => (
+        <div class="4u 12u(mobile)">
+          <section class="box">
+            <h3>{entry.data.order}.{entry.data.cardTitle ?? entry.data.title}</h3>
+            <br />
+            <a href={linkFor(entry)}><img width={entry.data.card.width} src={entry.data.card.thumb} alt={entry.data.title} /></a>
+            <br />
+            <a href={linkFor(entry)}>↑クリックで作品解説↑</a>
+          </section>
+        </div>
+      ))}
+    </div>
+  ))}
+</BaseLayout>

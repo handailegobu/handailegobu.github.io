@@ -1,0 +1,229 @@
+/* --- Reset & Base --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, "Hiragino Kaku Gothic ProN",
+               "Noto Sans JP", "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #222;
+  line-height: 1.8;
+  background: linear-gradient(180deg, #fafafa 0%, #f3f4f6 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Typography --- */
+@media (max-width: 800px) {
+  body { font-size: 17px; }
+  h1 { font-size: 28px !important; }
+  sup { font-size: 12px; }
+}
+@media (min-width: 801px) {
+  body { font-size: 20px; }
+  h1 { font-size: 35px !important; }
+  sup { font-size: 15px; }
+}
+
+/* --- Layout --- */
+header {
+  background: #ffffffcc;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  padding: 2.5rem 1rem 1.5rem 1rem;
+}
+
+.site-title {
+  font-weight: 800;
+  font-size: 2.7rem;
+  letter-spacing: 0.5px;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+nav a:hover {
+  color: #0072aa;
+}
+
+main {
+  flex: 1;
+  padding: 0 0rem;
+  background: #fafafa;
+}
+
+/* --- Section --- */
+section.section {
+  padding: 4rem 1rem;
+  border-top: 1px solid #eee;
+}
+section.section:nth-child(odd) {
+  background: #ffffff;
+}
+section.section:nth-child(even) {
+  background: #f8f9fb;
+}
+
+.section .inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.section .heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #222;
+}
+.section .lead {
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+.section .note {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 1rem;
+}
+
+/* --- 目次 --- */
+#table-of-contents {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+#table-of-contents ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+#table-of-contents li {
+  margin: 0.4rem 0;
+  line-height: 1.6;
+}
+
+#table-of-contents a {
+  color: #0066cc;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+#table-of-contents a:hover {
+  color: #004b99;
+  text-decoration-color: #004b99;
+}
+
+#table-of-contents .toc-h2 { font-weight: 600; }
+#table-of-contents .toc-h3 {
+  margin-left: 1rem;
+  font-size: 0.95em;
+}
+
+
+/* --- Figure --- */
+figure {
+  text-align: center;
+  margin: 2rem auto;
+}
+figcaption {
+  color: #555;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+#first_image img {
+  padding: 1rem;
+}
+
+/* --- Table --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  margin: 2rem 0;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+}
+thead th {
+  background: #f0f3f8;
+  color: #222;
+}
+tbody tr:nth-child(even) {
+  background: #f9fbfd;
+}
+.scrollable {
+    overflow-x: auto;
+}
+
+/* --- Tooltip (注釈) --- */
+.note-trigger {
+  text-decoration: underline dotted #999;
+  color: #666;
+  cursor: pointer;
+}
+.note-trigger:hover {
+  color: #000;
+}
+.tooltip {
+  position: absolute;
+  background: #ffffff;
+  color: #222;
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  max-width: 300px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid #ddd;
+  z-index: 20;
+  display: none;
+}
+.tooltip.mobile {
+    position:fixed;
+    left:50%;
+    bottom:1rem;
+    transform:translateX(-50%);
+    max-width: 90%;
+    width: 90%;
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  color: #555;
+  border-top: 1px solid #ddd;
+  background: #ffffffcc;
+  padding: 2rem 0;
+  font-size: 0.95rem;
+}
+
+/*テキストの折り返しなど*/
+.text {
+    display: inline-block;
+}
+
+.nowrap {
+    white-space: nowrap;
+}

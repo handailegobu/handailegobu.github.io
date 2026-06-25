@@ -1,0 +1,62 @@
+name: Build & Deploy to GitHub Pages
+
+# - build  : push / PR / 手動実行で常に走る。Astroビルドの検証を兼ねる。
+#            Ubuntu(本番同等)で走るため、Windowsローカルでは検出できない
+#            大文字拡張子(.JPG 等)の case-sensitive な 404 罠もここで顕在化する。
+# - deploy : master の時だけ走り、実際に GitHub Pages へ公開する。
+#
+# 注意: 本番が Actions 配信に切り替わるのは、リポジトリ設定 Settings > Pages の
+#       Source を「GitHub Actions」にした後。それまでは従来どおりブランチ配信のまま。
+on:
+  push:
+    branches: [master, feat/astro-migration]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同時実行を抑制（デプロイ中の多重起動を防ぐ）
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Build output summary
+        run: |
+          echo "主要URL(ディレクトリ形式)の出力を確認:"
+          ls -d dist/ dist/about/ dist/gallery/ dist/join/ dist/contact/ 2>/dev/null || true
+          echo "総HTML出力数: $(find dist -name '*.html' | wc -l)"
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+  # master の時だけ本番公開する。PR / feat ブランチ push では build までで止まる。
+  deploy:
+    needs: build
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

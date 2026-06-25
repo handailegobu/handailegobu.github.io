@@ -1,0 +1,52 @@
+---
+// ヤスタジャンは独自デザイン（独自CSS/JS）の自由制作領域。
+// 個別作品ページ(.html)と style.css / script.js は public/gallery/member_yasutajan/ へ
+// 無改変passthrough（URL・見た目を完全維持）。本作品棚indexのみ共通レイアウトで再生成する。
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const works = [
+  {
+    title: '天動説による惑星の運動モデル',
+    href: '/gallery/member_yasutajan/geocentric_model_of_planetary_motion.html',
+    img: '/images/gallery/member_yasutajan/work.png',
+  },
+  {
+    title: 'サインカーブ・トレーサー',
+    href: '/gallery/member_yasutajan/sine_curve_tracer.html',
+    img: '/images/gallery/member_yasutajan/sine_curve_tracer.jpg',
+  },
+];
+---
+
+<BaseLayout title="部員の作品棚：ヤスタジャン｜作品集｜大阪大学レゴ部" bodyClass="left-sidebar" ogImage="/images/gallery/member_yasutajan/work.png">
+  <section class="box">
+    <h2>ヤスタジャンの作品棚</h2>
+    <p></p>
+    <div class="row">
+      <div class="2u 2u(mobile)">
+        <img src="/images/gallery/thumbnail/yasutajan_icon.png" alt="ヤスタジャンのアイコン" />
+      </div>
+      <div class="10u 10u(mobile)">
+        <h3>自己紹介</h3>
+        <p>
+          記事をご覧いただきありがとうございます！<br>
+          年に1回くらいテクニック作品を作っています。<br>
+          もしよければ作品の解説を見ていってください！
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="row">
+    <div class="6u 12u(mobile)">
+      {works.map((w) => (
+        <section class="box">
+          <h3>{w.title}</h3>
+          <a href={w.href}><img width="100%" src={w.img} alt={w.title} /></a>
+          <br />
+          <a href={w.href}>↑クリックして作品解説を見る↑</a>
+        </section>
+      ))}
+    </div>
+  </div>
+</BaseLayout>
