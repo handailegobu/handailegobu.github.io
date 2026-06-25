@@ -1,20 +1,131 @@
-# [大阪大学レゴ部ホームページ Osaka University LEGO&reg; User Group Website](http://handailegobu.github.io)
-made by nami izarra
+# 大阪大学レゴ部 ホームページ
 
-updated by
-- てぃさえい (Tisaei)
+Osaka University LEGO&reg; User Group Website — <http://handailegobu.github.io>
 
-Credits:
+このサイトは **[Astro](https://astro.build/)** という仕組みで作られています。
+**Markdownファイルを1枚追加するだけで、作品ページが自動で増える**のが特長です。
 
-	Icons:
-		Font Awesome (fortawesome.github.com/Font-Awesome)
-		Lego Icons (https://thenounproject.com/term/lego-brick/346724/)
+> 💡 **このREADMEは「作品を追加・修正する編集係」向けのガイド**です。
+> サイトの仕組みそのものを触る人（新しい部員ページの追加・デザイン変更・記事ページの新規作成など）は、
+> **[docs/サイト管理ガイド.md](docs/サイト管理ガイド.md)** を読んでください。
 
-	Other:
-		jQuery (jquery.com)
-		html5shiv.js (@afarkas @jdalton @jon_neal @rem)
-		CSS3 Pie (css3pie.com)
-		background-size polyfill (github.com/louisremi)
-		Respond.js (j.mp/respondjs)
-		jquery.dropotron (@ajlkn)
-		Skel (skel.io)
+---
+
+## 公開のしくみ（まず知っておくこと）
+
+- このサイトは **`master` ブランチに変更を保存（コミット）すると、数分後に自動で公開**されます。
+  自分でビルド作業をする必要はありません。
+- **パソコンに何かをインストールする必要はありません。** ブラウザとGitHubアカウントだけで編集できます。
+- ⚠️ **保存してから公開まで1〜3分かかります。** すぐ反映されなくても慌てないでください。
+- ✅ **安全装置**: もし書き方を間違えても、その変更は**公開されず**、サイトは直前の正常な状態のまま保たれます。
+  （GitHubの画面で、コミットの横に **緑のチェック✓** が出れば公開成功、**赤い×** なら公開されていないサイン）
+
+---
+
+## ブラウザだけで編集する基本手順
+
+1. GitHubで [このリポジトリ](https://github.com/handailegobu/handailegobu.github.io) を開く
+2. 編集したいファイルを開き、右上の **鉛筆アイコン（✏️ Edit）** をクリック
+3. 内容を書き換える
+4. 画面下（または右上）の **「Commit changes」** を押す
+   - 「Commit directly to the `master` branch」を選んで Commit
+5. 1〜3分待つ → サイトに反映される（緑チェック✓を確認）
+
+新しいファイルを作るときは、フォルダ画面の **「Add file」→「Create new file」** を使います。
+
+---
+
+## よくある編集タスク
+
+### 1. 部員の作品棚に「新しい作品」を追加する（いちばん多い作業）
+
+例として **番匠さんの作品棚** に新作品「東京タワー」を追加する場合。
+
+#### ステップ1: 画像をアップロードする
+作品の画像を **`public/images/gallery/member_bansho/`** フォルダに追加します。
+（GitHubのそのフォルダを開き「Add file」→「Upload files」で画像をドラッグ＆ドロップ）
+
+- ファイル名は **半角英数字** にするのが安全です（例 `tokyotower.png`）。
+- 縮小表示用のサムネ画像も同じフォルダに置けばOKです。
+
+#### ステップ2: 作品のMarkdownファイルを1枚作る
+**`src/content/works/member_bansho/`** フォルダに、新しいファイル `tokyotower.md` を作り、以下を貼り付けて書き換えます。
+
+```markdown
+---
+title: "東京タワー"
+order: 12
+card:
+  thumb: "/images/gallery/member_bansho/tokyotower.png"
+images:
+  - src: "/images/gallery/member_bansho/tokyotower.png"
+    width: 400
+---
+
+- ここに作品の説明を箇条書きで書きます。
+- 何行書いてもOKです。
+```
+
+これを Commit すれば、**作品棚のカード・個別の作品ページ・並び順がすべて自動で作られます。**
+
+> ⚠️ この自動追加が効くのは、作品棚を**自動生成している部員**だけです。
+> 一部の部員は独自デザインの作品棚を使っており、その場合はこの方法では反映されません。
+> 見分け方: `src/content/members/member_<部員>.md` に `managed: false` と書いてあれば独自デザインなので、**管理担当者にお願い**してください。
+
+#### 入力する項目の意味
+
+| 項目 | 必須？ | 説明 |
+|---|---|---|
+| `title` | **必須** | 作品名。ページの見出しとタイトルになる |
+| `order` | **必須** | 作品棚での並び順（数字が小さいほど先頭）。**他の作品と重複しない数字**にする |
+| `card.thumb` | **必須** | 作品棚に出すサムネイル画像のパス（`/images/...` から書く） |
+| `card.width` | 任意 | サムネの幅(px)。未指定なら300 |
+| `images` | 任意 | 作品ページに並べる画像（複数可）。`src` と任意で `width` |
+| `heading` | 任意 | 画像の下の見出し。未指定だと「どういう作品？」になる |
+| `cardTitle` | 任意 | カードだけ別の見出しにしたいとき |
+| `related` | 任意 | 関連ページへのリンク（学祭ページ等）。書き方は既存の作品ファイルを参考に |
+
+> 📌 既存の作品ファイル（例 [src/content/works/member_bansho/orca.md](src/content/works/member_bansho/orca.md)）を
+> **コピーして書き換える**のが一番確実です。
+
+### 2. 作品の説明文や画像を直す
+
+該当する `src/content/works/<部員>/<作品>.md` を開いて、`---` から下の本文や、frontmatter（上の `---` で囲まれた部分）を編集 → Commit。
+
+### 3. 作品の並び順を変える
+
+各作品ファイルの `order:` の数字を変えるだけ。小さい順に並びます。
+
+---
+
+## 編集するときの注意点
+
+- **`---` で囲まれた部分（frontmatter）の書式を崩さない。** 特に **インデント（スペース）の数** はそのままに。
+  全角スペースは厳禁、半角スペースを使うこと。
+- **画像のパスは実際のファイル名と完全に一致させる。**
+  ⚠️ 特に **大文字・小文字も区別されます**（`Photo.JPG` と `photo.jpg` は別物扱い）。公開サーバーでは一致しないと画像が表示されません。
+- コミット後は **緑チェック✓** を必ず確認。**赤×なら公開されていません**（書式ミスの可能性）。
+  直し方がわからなければ、管理担当者に相談してください。
+- 不安なときは、いきなり `master` ではなく、わかる人にPull Requestでレビューしてもらう運用も可能です。
+
+---
+
+## こういう作業は「管理担当者」にお願いしてください
+
+以下は仕組み側のファイル（`.astro`）を触る必要があり、編集係の通常作業の範囲外です。
+→ **[docs/サイト管理ガイド.md](docs/サイト管理ガイド.md)** 参照。
+
+- **新しい部員の作品棚を丸ごと追加する**（トップの一覧にも手を入れる必要があるため）
+- **トップページの「最新情報」「代表作」を更新する**
+- **ワークショップ・コンテスト・学祭などの記事ページを新規作成する**
+- **独自デザインの作品棚**（ヤスタジャンさん等）の編集
+- **サイトのデザイン・レイアウト・共通部分の変更**
+
+---
+
+## クレジット
+
+- 原作: nami izarra
+- 移行・運用: てぃさえい (Tisaei) ほか
+- フレームワーク: [Astro](https://astro.build/)
+- アイコン: [Font Awesome](https://fontawesome.com/) / [Lego Icons (the Noun Project)](https://thenounproject.com/term/lego-brick/346724/)
