@@ -40,7 +40,7 @@
 		-webkit-text-size-adjust: none;
 	}
 /* namelist for pc */
-	.pc { display: block ; }
+	.pc { display: table ; }
 	.sp { display: none ; }
 /* Box Model */
 
@@ -2530,7 +2530,7 @@
 		/* Change Namelist */
 			.pc { display: none ; }
 			.sp { 
-				display: block ; 
+				display: table ; 
 				font-size: 0.7em;
 			}	
 	}
