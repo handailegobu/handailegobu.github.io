@@ -12,3 +12,9 @@ images:
 ---
 
 ファミレスのハンバーグをイメージして作りました。<br>ハンバーグを半分に切ると、中にチーズが入っています。
+
+
+<video controls preload="metadata" width="400">
+  <source src="/images/gallery/member_kuruponkyu/hamburg.mp4" type="video/mp4">
+  お使いのブラウザは動画再生に対応していません。
+</video>

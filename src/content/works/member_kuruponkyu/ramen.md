@@ -19,3 +19,8 @@ images: []
 <img src="/images/gallery/member_kuruponkyu/ramen2.jpg" alt="ラーメン" />
 <img src="/images/gallery/member_kuruponkyu/ramen3.jpg" alt="ラーメン" />
 </div>
+<br>
+<video controls preload="metadata" width="400">
+  <source src="/images/gallery/member_kuruponkyu/ramen.mp4" type="video/mp4">
+  お使いのブラウザは動画再生に対応していません。
+</video>
