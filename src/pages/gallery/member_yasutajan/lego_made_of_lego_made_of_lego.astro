@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const image = '/images/gallery/member_yasutajan/LEGO_made_of_LEGO_made_of_LEGO.png';
+---
+
+<BaseLayout
+  title="LEGO made of LEGO made of LEGO｜部員の作品棚：ヤスタジャン｜作品集｜大阪大学レゴ部"
+  bodyClass="left-sidebar"
+  ogImage={image || undefined}
+>
+  <article class="box post">
+    <header>
+      <h2>LEGO made of LEGO made of LEGO</h2>
+    </header>
+
+    {image && (
+      <figure>
+        <img class="work-image" src={image} alt="LEGO made of LEGO made of LEGOの作品写真" />
+      </figure>
+    )}
+
+    <section>
+      <h3>作品紹介</h3>
+      <p>
+        これは、レゴで作られたレゴで作られたレゴです。<br />
+        レゴで作られたレゴで1×1のレゴブロックを作りました。
+      </p>
+      <p>
+        みなさんの中には、これは「レゴで作られた『レゴで作られたレゴ』」と「『レゴで作られたレゴ』で作られたレゴ」のどちらなのか、疑問に思った方がいると思います。<br />
+        しかし、「レゴで作られた『レゴで作られたレゴ』」と「『レゴで作られたレゴ』で作られたレゴ」はどちらも同じです。<br />
+        なぜならば、「レゴAで作られたレゴB」がレゴCで作られていれば、そのレゴBはレゴCで作られていることになり、さらにその「レゴCで作られたレゴB」はレゴAで作られているからです。<br />
+        このため私は、「レゴで作られた『レゴで作られたレゴ』」や「『レゴで作られたレゴ』で作られたレゴ」ではなく、単に「レゴで作られたレゴで作られたレゴ」と表現しました。
+      </p>
+        <img class="work-image" src={'/images/gallery/member_yasutajan/LEGO_made_of_LEGO_made_of_LEGO_2.png'} alt="LEGO made of LEGO made of LEGOの作品写真2" />
+      <p>
+        レゴで作られたレゴで作られたレゴで作られたレゴに関しては、次が成り立ちます。<br />
+        &nbsp;&nbsp;レゴで作られた「レゴで作られた『レゴで作られたレゴ』」<br />
+        =&nbsp;「レゴで作られたレゴ」で作られた「レゴで作られたレゴ」<br />
+        =&nbsp;「レゴで作られた『レゴで作られたレゴ』」で作られたレゴ<br />
+        =&nbsp;レゴで作られた「『レゴで作られたレゴ』で作られたレゴ」<br />
+        =&nbsp;「『レゴで作られたレゴ』で作られたレゴ」で作られたレゴ<br />
+        レゴで作られたレゴで作られたレゴで作られたレゴで作られたレゴに関しても同様です。
+      </p>
+      <p>
+        上記の等式は、「レゴで作られた『レゴで作られたレゴ』」=「『レゴで作られたレゴ』で作られたレゴ」という等式だけを用いて証明できます。
+      </p>
+      <p>
+        ところで、レゴで作られたレゴで作られたレゴ&nbsp;=&nbsp;レゴ(で作られたレゴ)²&nbsp;=&nbsp;(レゴで作られた)²レゴ&nbsp;が成り立ちます。<br />
+        一方、レゴで作られたレゴで作られたレゴ&nbsp;=&nbsp;(レゴ)³(で作られた)²&nbsp;が成り立つと、すぐに推論してはいけません。<br />
+        というのも、「レゴで作られた」と「で作られたレゴ」は異なるからです。これは間違いやすいところです！
+      </p>
+      <img class="work-image" src={'/images/gallery/member_yasutajan/LEGO_made_of_LEGO_made_of_LEGO_3.png'} alt="LEGO made of LEGO made of LEGOの作品写真3" />
+    </section>
+
+    <section>
+      <h3>更新履歴</h3>
+      <p>
+        2026年10月30日 初版
+      </p>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  .work-image {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin: 0 auto 2em;
+  }
+</style>
