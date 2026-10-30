@@ -84,6 +84,10 @@ triggers.forEach(trigger => {
         }
     }
     });
+
+    trigger.addEventListener('blur', () => {
+        if(activeTrigger === trigger) hideTooltip();
+    });
 });
 
 // clicking/tapping anywhere else closes the tooltip

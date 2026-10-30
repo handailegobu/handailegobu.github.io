@@ -187,6 +187,10 @@ tbody tr:nth-child(even) {
 .note-trigger:hover {
   color: #000;
 }
+.note-trigger:focus-visible {
+  outline: 2px solid #0072aa;
+  outline-offset: 2px;
+}
 .tooltip {
   position: absolute;
   background: #ffffff;
