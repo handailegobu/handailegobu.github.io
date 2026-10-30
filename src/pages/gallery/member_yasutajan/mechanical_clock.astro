@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="機械式時計｜部員の作品棚：ヤスタジャン｜作品集｜大阪大学レゴ部"
+  bodyClass="left-sidebar"
+  ogImage="/images/gallery/member_yasutajan/mechanical_clock.png"
+>
+  <article class="box post">
+    <header>
+      <h2>機械式時計</h2>
+    </header>
+
+    <figure id="first_image">
+      <img class="work-image" src="/images/gallery/member_yasutajan/mechanical_clock.png" alt="作品の写真" />
+    </figure>
+
+    <section id="toc">
+      <h3>作品紹介</h3>
+      <p>
+        レゴで作った時計です。<br />
+        おもりが重力によって引っ張られる力を利用して振り子を動かすことによって、秒針や分針、時針を正しい比率で動かすことができます。
+      </p>
+      <p>
+        こちらが実際に動いている様子です。<br />
+      </p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/2i5xd1ts-TY" title="機械式時計" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <p>
+        振り子で動かすと、分針や時針が動いているのが見えにくいです。こちらは、モーターで秒針を高速回転させたときの動画です。
+      </p>
+      <div class="video-container">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/CmF42wbTKJ8" title="機械式時計" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <p>
+        機械式時計のうち、秒針と分針、時針をつなぐ部分は、下の図のように歯車をかみ合わせています。ただ1/60や1/12に減速するだけでなく、3本の針の支点の位置を同じにしたり、回す方向を同じにしなければならないため、難易度が高いです。<br />
+        テスト返却後の問題解説の時間中、必死にギア比を計算した覚えがあります。3:4:5の直角三角形の比を使えばうまくいくことに気づいたとき、声が出そうになりました。
+      </p>
+      <img class="work-image" src="/images/gallery/member_yasutajan/clock_gears.png" alt="歯車の組み合わせ" />
+      <p>
+        図中の記号の意味や歯車の仕組みについては、次の記事をご覧ください。<br />
+        <a href="https://handailegobu.github.io/gallery/member_yasutajan/geocentric_model_of_planetary_motion.html">天動説による惑星の運動モデル</a>
+      </p>
+      <p>
+        機械式時計は私がレゴ部に入部して初めて作った作品なので、とても思い入れがあります。<br />
+        完成した2年後に解体しました。今は他の作品の部品として使われていることでしょう。
+      </p>
+    </section>
+
+    <section>
+      <h3>更新履歴など</h3>
+      <p>
+        <b>更新履歴</b><br />
+        2026年10月30日 初版
+      </p>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  .work-image {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin: 0 auto 2em;
+  }
+
+  .video-container {
+    margin-bottom: 2em;
+  }
+</style>
