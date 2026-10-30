@@ -1,0 +1,132 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const image = '/images/gallery/member_yasutajan/roulette.jpg';
+const programImage = '/images/gallery/member_yasutajan/roulette_program.png';
+---
+
+<BaseLayout
+  title="ルーレット｜部員の作品棚：ヤスタジャン｜作品集｜大阪大学レゴ部"
+  bodyClass="left-sidebar"
+  ogImage={image || undefined}
+>
+  <article class="box post">
+    <header>
+      <h2>ルーレット</h2>
+    </header>
+
+    {image && (
+      <figure>
+        <img class="work-image" src={image} alt="ルーレットの作品写真" />
+      </figure>
+    )}
+
+    <section>
+      <h3>作品紹介</h3>
+      <p>
+        これはルーレットです。例年、学祭で寄付をしてくださるお客様に、こちらのルーレットを体験していただいています。<br />
+        投入口に100円玉を3枚入れるとルーレットが回り始め、ボタンを押すと一つずつ止まります。色をそろえて楽しむゲームです。<br />
+        ルーレットは、中途半端な位置で止まらず、ちょうどいい位置まで進んで止まるようになっています。
+      </p>
+      <div class="x-post">
+        <blockquote class="twitter-tweet" data-lang="ja" data-align="center" data-dnt="true">
+          <a href="https://twitter.com/handai05club/status/1785825420618985737">大阪大学レゴ部のポスト</a>
+        </blockquote>
+      </div>
+      <script is:inline async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+      <p>
+        実は、阪大レゴ部には私が入部するずっとずっと前からルーレットがありました。しかしそのルーレットは、何年も使われたため筐体がボロボロになっており、遊び始めて15分後のジェンガくらいもろいものでした。<br />
+        そこで2025年度卒業生の<a href="https://handailegobu.github.io/gallery/member_mame-daifuku/">まめ大福</a>が私に新しく作り直してほしいと依頼したため、今後10年は壊れないルーレットを目指し、95%くらいのパーツを取っ払う大改造を行いました。また、プログラムも初めから書き直しました。<br />
+        こうした経緯があるのですが、一応これは私の作品だと主張しておきます。
+      </p>
+      <p>
+        このルーレットには、色々な機能があります。<br />
+        非常用（または部員が遊ぶ用）に、お客さんからは見えない位置にもう一つボタンがあり、このボタンを押すと、お金を入れなくてもルーレットが回り始めるようになっています。<br />
+        また、真ん中の機械の上下のボタンを押すと、ルーレットが回るスピードを10段階で調節できます。<br />
+        さらに左右のボタンを押すと、「実力モード」、「絶対そろわないモード」、「絶対2色そろえるモード」、「絶対3色そろえるモード」を切り替えることができます。（みなさんが操作するときは実力モードにしているのでご安心を！）<br />
+        中央のボタンを押すと、現在選択されているモードとスピードを教えてくれます。
+      </p>
+      <p>
+        こちらは、絶対3色そろえるモードで動かしたときの動画です。
+      </p>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/udwwqCKxIkI" title="忖度ルーレット" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <p>
+        プログラムはこのような感じになっています。結構長いです。
+      </p>
+      <figure>
+        <a href={programImage} target="_blank" rel="noopener noreferrer">
+          <img class="program-image" src={programImage} alt="ルーレットのプログラムの写真" />
+        </a>
+      </figure>
+    </section>
+
+    <section aria-labelledby="faq-heading">
+      <h3 id="faq-heading">よくある質問</h3>
+      <dl class="faq-list">
+        <div class="faq-item">
+          <dt>Q. これはレゴなの？</dt>
+          <dd>A. はい、レゴです。"LEGO MINDSTORMS" というものを使って、モーターをプログラムで制御しています。ちなみに、結構高いです。</dd>
+        </div>
+        <div class="faq-item">
+          <dt>Q. 100円玉じゃないと動かないの？</dt>
+          <dd>A. いいえ、1円玉でもどんな硬貨でも動きます。硬貨でなくても、投入口に棒を差し込んでも反応します。（ミニプレをお渡しするときはそんなことはしないでね！）</dd>
+        </div>
+        <div class="faq-item">
+          <dt>Q. 全然そろわないんだけど！</dt>
+          <dd>A. このルーレットは、中途半端な位置では止まらず、ちょうどいい位置まで進んでから止まるようになっています。このため、止めたい位置より45度手前に来た瞬間にボタンを押すとうまく止められます。</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section>
+      <h3>更新履歴</h3>
+      <p>
+        2026年10月30日 初版
+      </p>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  .work-image {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin: 0 auto 2em;
+  }
+
+  .program-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 2em;
+  }
+
+  .x-post,
+  .video-container {
+    margin-bottom: 2em;
+  }
+
+  .x-post blockquote {
+    border: 0;
+    padding: 0;
+    font-style: normal;
+  }
+
+  .faq-item + .faq-item {
+    margin-top: 1.75em;
+  }
+
+  .faq-item dt {
+    margin-bottom: 0.35em;
+    font-weight: 700;
+  }
+
+  .faq-item dd {
+    margin: 0;
+  }
+</style>

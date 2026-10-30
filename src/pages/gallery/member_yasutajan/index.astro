@@ -19,6 +19,11 @@ const works = [
     href: '/gallery/member_yasutajan/mechanical_clock/',
     img: '/images/gallery/member_yasutajan/mechanical_clock.png',
   },
+  {
+    title: 'ルーレット',
+    href: '/gallery/member_yasutajan/roulette/',
+    img: '/images/gallery/member_yasutajan/roulette.jpg',
+  },
 ];
 ---
 
@@ -46,7 +51,7 @@ const works = [
       {works.map((w) => (
         <section class="box">
           <h3>{w.title}</h3>
-          <a href={w.href}><img width="100%" src={w.img} alt={w.title} /></a>
+          {w.img && <a href={w.href}><img width="100%" src={w.img} alt={w.title} /></a>}
           <br />
           <a href={w.href}>↑クリックして作品解説を見る↑</a>
         </section>
