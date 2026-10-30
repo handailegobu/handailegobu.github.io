@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="サインカーブ・トレーサー｜部員の作品棚：ヤスタジャン｜作品集｜大阪大学レゴ部"
+  bodyClass="left-sidebar"
+  ogImage="/images/gallery/member_yasutajan/sine_curve_tracer.jpg"
+>
+  <article class="box post">
+    <header>
+      <h2>サインカーブ・トレーサー</h2>
+    </header>
+
+    <figure id="first_image">
+      <img class="work-image" src="/images/gallery/member_yasutajan/sine_curve_tracer.jpg" alt="作品の写真" />
+    </figure>
+
+    <section id="toc">
+      <h3>作品紹介</h3>
+      <p>
+        これは、y=sin&nbsp;x&nbsp;のグラフをかいてくれる装置です。<br />
+        手で持って車を右に動かすと、車の下に取り付けられている筆が上下に往復運動し、全体としてサインカーブ（正弦曲線）を描きます。
+      </p>
+      <p>
+        こちらが実際に動かしている動画です。<br />
+        ちなみに動画内のピンク色の紙は、水がついたところだけ紙の色が変わる書道用の紙です。<br />
+      </p>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/OHarxmGh_VY?si=8CyVeemQYVyE3NlZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <p>
+        この装置の仕組みは、「円運動&nbsp;正弦曲線」などと調べればだいたい分かると思います。<br />
+      </p>
+      <p>
+        ちなみに私は、コサインこそが正統な三角関数であると考えています。<br />
+        サインはコサインを平行移動しただけにすぎない副次的な存在であり、本来は「コ・コサイン」（余・余弦）と呼ばれるべき対象です。唯一の自然な数学理論は、まずコサインを厳然と定義し、続いてコサインから派生して生じるサインを定義する、と展開されるものです。
+      </p>
+      <p>
+        そのため、この作品名も「コサインカーブ・トレーサー」としたかったのですが、さすがに思想を前面に出し過ぎかなと思って自重しておきました。
+      </p>
+    </section>
+
+    <section>
+      <h3>更新履歴</h3>
+      <p>2026年10月30日 Webページの構造を変更。また、文章表現を修正しました。</p>
+      <p>2026年4月24日 初版</p>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  .work-image {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin: 0 auto 2em;
+  }
+
+  .video-container {
+    margin-bottom: 2em;
+  }
+</style>

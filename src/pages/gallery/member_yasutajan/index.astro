@@ -1,7 +1,6 @@
 ---
-// ヤスタジャンは独自デザイン（独自CSS/JS）の自由制作領域。
-// 個別作品ページ(.html)と style.css / script.js は public/gallery/member_yasutajan/ へ
-// 無改変passthrough（URL・見た目を完全維持）。本作品棚indexのみ共通レイアウトで再生成する。
+// 作品棚とサインカーブ・トレーサーは共通レイアウトを使用する。
+// 天動説による惑星の運動モデルは public/gallery/member_yasutajan/ の独自HTML/CSS/JSを配信する。
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 
 const works = [
@@ -12,7 +11,7 @@ const works = [
   },
   {
     title: 'サインカーブ・トレーサー',
-    href: '/gallery/member_yasutajan/sine_curve_tracer.html',
+    href: '/gallery/member_yasutajan/sine_curve_tracer/',
     img: '/images/gallery/member_yasutajan/sine_curve_tracer.jpg',
   },
 ];
